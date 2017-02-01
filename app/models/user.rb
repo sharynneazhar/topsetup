@@ -4,12 +4,15 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+
+  has_many :setups
+
   # Virtual attribute for authenticating by either username or email
   # This is in addition to a real persisted field like 'username'
   attr_accessor :login
 
   validate :validate_username
-  validates :username, :presence => true, :uniqueness => { :case_sensitive => false } 
+  validates :username, :presence => true, :uniqueness => { :case_sensitive => false }
 
   def validate_username
     if User.where(email: username).exists?

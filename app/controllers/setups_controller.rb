@@ -24,7 +24,7 @@ class SetupsController < ApplicationController
   # POST /setups
   # POST /setups.json
   def create
-    @setup = Setup.new(setup_params)
+    @setup = current_user.setups.new(setup_params)
 
     respond_to do |format|
       if @setup.save

@@ -6,6 +6,7 @@
       <th>Name</th>
       <th>Description</th>
       <th>Hero image</th>
+      <th>User Id</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
         <td><%= setup.name %></td>
         <td><%= setup.description %></td>
         <td><%= setup.hero_image_id %></td>
+        <td><%= setup.user_id %></td>
         <td><%= link_to 'Show', setup %></td>
         <td><%= link_to 'Edit', edit_setup_path(setup) %></td>
         <td><%= link_to 'Destroy', setup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
