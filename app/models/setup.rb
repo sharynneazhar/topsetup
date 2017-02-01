@@ -1,4 +1,3 @@
 class Setup < ApplicationRecord
-  mount_uploader :hero_image_id, ImageUploader
-
+  mount_uploaders :images, ImageUploader
 end

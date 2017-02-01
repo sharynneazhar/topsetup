@@ -25,6 +25,7 @@ class SetupsController < ApplicationController
   # POST /setups.json
   def create
     @setup = current_user.setups.new(setup_params)
+    @setup.hero_image_id = setup_params[:images[0]]
 
     respond_to do |format|
       if @setup.save
@@ -69,6 +70,6 @@ class SetupsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def setup_params
-      params.require(:setup).permit(:name, :description, :hero_image_id)
+      params.require(:setup).permit(:name, :description, {images: []})
     end
 end
