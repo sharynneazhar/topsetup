@@ -1,4 +1,4 @@
-<%= form_for(setup) do |f| %>
+<%= form_for(setup, html: { multipart: true }) do |f| %>
   <% if setup.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(setup.errors.count, "error") %> prohibited this setup from being saved:</h2>
@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :hero_image_id %>
-    <%= f.text_field :hero_image_id %>
+    <%= f.file_field :hero_image_id %>
   </div>
 
   <div class="actions">

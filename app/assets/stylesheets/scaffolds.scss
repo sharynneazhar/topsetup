@@ -1,36 +1,8 @@
-body {
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-  margin: 33px;
-}
-
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-  margin: 33px;
-}
-
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
-
-a {
-  color: #000;
-
-  &:visited {
-    color: #666;
-  }
-
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
+html, body {
+  background-color: $bg;
+  color: $gray;
+  font-family: "Lato", "Open-Sans", sans-serif;
+  font-weight: $regular;
 }
 
 th {
@@ -86,4 +58,42 @@ div {
 
 label {
   display: block;
+}
+
+.navbar {
+  background-color: transparent;
+  border: none;
+  color: $gray;
+  padding-top: 20px;
+
+  .navbar-brand {
+    padding-left: 0;
+    color: $gray;
+    font-size: 36px;
+    font-weight: $black;
+
+    span, {
+      color: $bluePop;
+    }
+  }
+
+  .navbar-brand:hover {
+    color: $gray;
+  }
+
+  .navbar-text a {
+    margin-left: 30px;
+    color: $gray;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  .navbar-link {
+    color: $gray;
+  }
+
+  .navbar-link:hover {
+    color: $bluePop;
+    text-decoration: none;
+  }
 }

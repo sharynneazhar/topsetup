@@ -10,7 +10,7 @@
 
 <p>
   <strong>Hero image:</strong>
-  <%= @setup.hero_image_id %>
+  <%= image_tag(@setup.hero_image_id, width: 600) if @setup.hero_image_id.present? %>
 </p>
 
 <p>
