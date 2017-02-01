@@ -1,0 +1,17 @@
+<p>
+  <strong>Name:</strong>
+  <%= @setup.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @setup.description %>
+</p>
+
+<p>
+  <strong>Hero image:</strong>
+  <%= @setup.hero_image_id %>
+</p>
+
+<%= link_to 'Edit', edit_setup_path(@setup) %> |
+<%= link_to 'Back', setups_path %>
