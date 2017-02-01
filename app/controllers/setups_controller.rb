@@ -25,8 +25,6 @@ class SetupsController < ApplicationController
   # POST /setups.json
   def create
     @setup = current_user.setups.new(setup_params)
-    @setup.hero_image_id = setup_params[:images[0]]
-
     respond_to do |format|
       if @setup.save
         format.html { redirect_to @setup, notice: 'Setup was successfully created.' }
