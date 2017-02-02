@@ -10,13 +10,13 @@
 
 <p>
   <strong>Hero image:</strong>
-  <%= image_tag(@setup.images[0], width: 150) if @setup.images[0].present? %>
+  <%= image_tag(@setup_images[0].image_url, width: 150) if @setup_images[0].present? %>
 </p>
 
 <p>
   <strong>Images:</strong>
-  <% @setup.images.each do |image| %>
-    <%= image_tag(image, width: 150) if image.present? %>
+  <% @setup_images.each do |image| %>
+    <%= image_tag(image.image_url, width: 150) if image.present? %>
   <% end %>
 </p>
 

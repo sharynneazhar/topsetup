@@ -1,8 +1,8 @@
 <h4>Recent Submissions</h4>
 
 <% @setups.each do |setup| %>
-  <% if setup.images[0] %>
-    <%= link_to image_tag(setup.images[0]), setup %>
+  <% if setup.setup_images %>
+    <%= link_to image_tag(setup.setup_images[0].image_url), setup %>
   <% end %>
 <% end %>
 

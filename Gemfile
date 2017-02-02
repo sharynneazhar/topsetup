@@ -27,7 +27,7 @@ gem 'devise'
 gem 'rails-erd'
 
 # Carrierwave for image uploading
-gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+gem 'carrierwave'
 
 # Figaro to securely configure application
 # gem 'figaro'

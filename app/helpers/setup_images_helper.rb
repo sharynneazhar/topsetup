@@ -1,0 +1,2 @@
+module SetupImagesHelper
+end

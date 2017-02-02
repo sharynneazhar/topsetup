@@ -21,10 +21,12 @@
     <%= f.text_field :description %>
   </div>
 
-  <div class="field">
-    <%= f.label :images %>
-    <%= f.file_field :images, multiple: true %>
-  </div>
+  <%= f.fields_for :setup_images do |s| %>
+    <div class="field">
+      <%= s.label :image %>
+      <%= s.file_field :image, multiple: true, name: "setup_images[image][]" %>
+    </div>
+  <% end %>
 
   <div class="actions">
     <%= f.submit %>

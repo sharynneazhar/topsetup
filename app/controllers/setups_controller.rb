@@ -10,11 +10,13 @@ class SetupsController < ApplicationController
   # GET /setups/1
   # GET /setups/1.json
   def show
+    @setup_images = @setup.setup_images.all
   end
 
   # GET /setups/new
   def new
     @setup = Setup.new
+    @setup_image = @setup.setup_images.build
   end
 
   # GET /setups/1/edit
@@ -27,6 +29,9 @@ class SetupsController < ApplicationController
     @setup = current_user.setups.new(setup_params)
     respond_to do |format|
       if @setup.save
+        params[:setup_images]['image'].each do |i|
+          @setup_image = @setup.setup_images.create!(:image => i, :setup_id => @setup.id)
+        end
         format.html { redirect_to @setup, notice: 'Setup was successfully created.' }
         format.json { render :show, status: :created, location: @setup }
       else
@@ -68,6 +73,6 @@ class SetupsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def setup_params
-      params.require(:setup).permit(:name, :description, {images: []})
+      params.require(:setup).permit(:name, :description, setup_images_attributes: [:id, :setup_id, :image])
     end
 end
