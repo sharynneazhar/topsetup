@@ -2,7 +2,7 @@
 
 <% @setups.each do |setup| %>
   <% if setup.setup_images %>
-    <%= link_to image_tag(setup.setup_images[0].image_url), setup %>
+    <%= link_to image_tag(setup.setup_images[0].image.thumb.url), setup %>
   <% end %>
 <% end %>
 

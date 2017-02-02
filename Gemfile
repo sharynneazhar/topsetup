@@ -29,12 +29,14 @@ gem 'rails-erd'
 # Carrierwave for image uploading
 gem 'carrierwave'
 
+# Use MiniMagick for image processing
+gem 'mini_magick'
+
 # Figaro to securely configure application
 # gem 'figaro'
 
 # add twitter bootstrap
 gem 'bootstrap-sass'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
