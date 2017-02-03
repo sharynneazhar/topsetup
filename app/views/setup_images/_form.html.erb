@@ -1,0 +1,23 @@
+<%= image_tag @setup_image.image %>
+<%= form_for(setup_image) do |f| %>
+  <% if setup_image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(setup_image.errors.count, "error") %> prohibited this setup_image from being saved:</h2>
+
+      <ul>
+      <% setup_image.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
