@@ -1,0 +1,18 @@
+.btn {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background-image: none;
+  border: 0;
+}
+
+.btn-login {
+  margin: 15px;
+  background-color: $bluePop;
+  color: #fff;
+}
+
+.btn-login:hover {
+  background-color: #87c3d8;
+  color: #fff;
+}

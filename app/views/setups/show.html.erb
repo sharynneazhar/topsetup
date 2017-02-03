@@ -1,5 +1,6 @@
 
 <%= link_to 'Edit', edit_setup_path(@setup) %> |
+<%= link_to 'Destroy', @setup, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back', setups_path %>
 
 <br><br>

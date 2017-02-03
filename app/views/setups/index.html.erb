@@ -5,10 +5,10 @@
 
 <br>
 
-<% @setups.each do |setup| %>
-  <% if setup.setup_images %>
-    <span style="margin:15px;">
-      <%= link_to image_tag(setup.setup_images[0].image.thumb.url), setup %>
-    </span>
+<div style="photo-grid">
+  <% @setups.each do |setup| %>
+    <% if setup.setup_images %>
+      <span style="margin:6px;"><%= link_to image_tag(setup.setup_images[0].image.thumbBig.url), setup %></span>
+    <% end %>
   <% end %>
-<% end %>
+</div>

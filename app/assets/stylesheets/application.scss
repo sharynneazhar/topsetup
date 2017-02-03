@@ -5,6 +5,7 @@
 /* import other local scss files */
 @import "variables";
 @import "scaffolds";
+@import "buttons";
 @import "setups";
 
 /* flatten bootstrap css */
@@ -36,4 +37,39 @@ textarea {
   border-radius: 0 !important;
   border-collapse: collapse !important;
   background-image: none !important;
+}
+
+.link {
+  color: $bluePop;
+}
+
+.link:hover {
+  color: $bluePop;
+}
+
+/* home page styles */
+
+.photo-grid {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+}
+
+
+/* login page styles -- same styles for sign up */
+.login {
+  padding: 40px;
+  color: $blueDark;
+
+  h1 {
+    font-weight: $black;
+  }
+
+  p {
+    font-weight: $regular;
+  }
+
+  .well {
+    margin: 30px;
+  }
 }
