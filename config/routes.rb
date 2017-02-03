@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :setup_images
   resources :setups
 
   devise_for :users

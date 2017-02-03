@@ -1,1 +1,0 @@
-json.partial! "setup_images/setup_image", setup_image: @setup_image
