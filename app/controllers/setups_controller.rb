@@ -11,6 +11,7 @@ class SetupsController < ApplicationController
   # GET /setups/1.json
   def show
     @setup_images = @setup.setup_images.all
+    @setup_user = User.find(@setup.user_id)
   end
 
   # GET /setups/new

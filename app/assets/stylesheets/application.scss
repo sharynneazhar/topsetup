@@ -1,10 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "material_icons";
 
 /* import other local scss files */
 @import "variables";
 @import "scaffolds";
-
+@import "setups";
 
 /* flatten bootstrap css */
 .add-on,

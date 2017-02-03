@@ -1,11 +1,14 @@
-<h4>Recent Submissions</h4>
-
-<% @setups.each do |setup| %>
-  <% if setup.setup_images %>
-    <%= link_to image_tag(setup.setup_images[0].image.thumb.url), setup %>
-  <% end %>
-<% end %>
+<div style="display:flex;align-items:center;">
+  <h4>Recent Submissions</h4>
+  <i class="material-icons">expand_more</i>
+</div>
 
 <br>
 
-<%= link_to 'New Setup', new_setup_path %>
+<% @setups.each do |setup| %>
+  <% if setup.setup_images %>
+    <span style="margin:15px;">
+      <%= link_to image_tag(setup.setup_images[0].image.thumb.url), setup %>
+    </span>
+  <% end %>
+<% end %>

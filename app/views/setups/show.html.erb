@@ -1,29 +1,35 @@
-<p>
-  <strong>Name:</strong>
-  <%= @setup.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @setup.description %>
-</p>
-
-<p>
-  <strong>Hero image:</strong>
-  <%= image_tag(@setup_images[0].image_url, width: 150) if @setup_images[0].present? %>
-</p>
-
-<p>
-  <strong>Images:</strong>
-  <% @setup_images.each do |image| %>
-    <%= image_tag(image.image_url, width: 150) if image.present? %>
-  <% end %>
-</p>
-
-<p>
-  <strong>User Id:</strong>
-  <%= @setup.user_id %>
-</p>
 
 <%= link_to 'Edit', edit_setup_path(@setup) %> |
 <%= link_to 'Back', setups_path %>
+
+<br><br>
+
+<div class="row">
+  <div class="col-md-8">
+    <div class="setup-images row">
+      <div class="hero-image col-md-10">
+        <%= image_tag(@setup_images[0].image.hero.url, :class => "img-responsive") if @setup_images[0].present? %>
+      </div>
+      <div class="thumbnails col-md-2">
+        <% @setup_images.each do |image| %>
+          <%= image_tag(image.image.thumb.url) if image.present? %>
+        <% end %>
+      </div>
+    </div>
+    <button class="btn btn-favorite"><i class="material-icons">favorite_border</i>SAVE TO FAVORITES</button>
+    <div class="setup-description">
+      <%= @setup.description %>
+    </div>
+    <hr>
+    <div class="setup-comments">
+      Comments will go here...
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="setup-information">
+      <h1><%= @setup.name %></h1>
+      by <%= link_to @setup_user.username, edit_user_registration_path %></a>
+    </div>
+    <hr>
+  </div>
+</div>
