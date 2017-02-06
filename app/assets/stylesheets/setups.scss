@@ -18,12 +18,17 @@
   }
 }
 
+.setup_images {
+  height: 33%;
+  overflow: hidden;
+}
+
 .thumbnails {
   display: flex;
   flex-direction: column;
   margin-left: -15px;
 
-  img:not(:last-child) {
+  a:not(:last-child) {
     margin-bottom: 10px;
   }
 }
