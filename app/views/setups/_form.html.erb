@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= f.label :description %>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, :rows => 10, style: 'width:50%;' %>
   </div>
 
   <%= f.fields_for :setup_images do |s| %>
@@ -30,7 +30,20 @@
       <% end %>
     </div>
   <% end %>
-  
+
+  <br>
+
+  <%= f.fields_for :parts do |s| %>
+    <div class="field">
+      <%= s.label :name %>
+      <%= s.text_field :name, name: "parts[part][name]" %>
+    </div>
+    <div class="field">
+      <%= s.label :link %>
+      <%= s.text_field :link, name: "parts[part][link]" %>
+    </div>
+  <% end %>
+
   <br>
 
   <div class="actions">

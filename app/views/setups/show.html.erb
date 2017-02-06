@@ -29,9 +29,16 @@
   <div class="col-md-4">
     <div class="setup-information">
       <h1><%= @setup.name %></h1>
-      by <%= link_to @setup_user.username, edit_user_registration_path %></a>
+      by <%= link_to @setup_user.username, edit_user_registration_path %>
     </div>
     <hr>
+    <div class="setup-parts">
+      <% @parts.each do |part| %>
+        <%= link_to part.name, "#" %>
+        <br>
+        <%= link_to part.link, "#" %>
+      <% end %>
+    </div>
   </div>
 </div>
 

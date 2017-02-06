@@ -1,3 +1,23 @@
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background-image: none;
+  border: 0;
+  margin: 15px 0;
+  background-color: $bluePop;
+  color: #fff;
+}
+
+input[type=button]:hover,
+input[type=reset]:hover,
+input[type=submit]:hover {
+  background-color: #87c3d8;
+  color: #fff;
+}
+
 .btn {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;

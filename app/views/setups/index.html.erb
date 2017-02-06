@@ -8,7 +8,7 @@
 <div style="photo-grid">
   <% @setups.each do |setup| %>
     <% if setup.setup_images %>
-      <span style="margin:6px;"><%= link_to image_tag(setup.setup_images[0].image.thumbBig.url), setup %></span>
+      <%= link_to image_tag(setup.setup_images[0].image.thumbBig.url), setup %>
     <% end %>
   <% end %>
 </div>

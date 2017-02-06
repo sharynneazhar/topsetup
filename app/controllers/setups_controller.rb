@@ -10,14 +10,16 @@ class SetupsController < ApplicationController
   # GET /setups/1
   # GET /setups/1.json
   def show
-    @setup_images = @setup.setup_images.all
     @setup_user = User.find(@setup.user_id)
+    @setup_images = @setup.setup_images.all
+    @parts = @setup.parts.all
   end
 
   # GET /setups/new
   def new
     @setup = Setup.new
     @setup_image = @setup.setup_images.build
+    @part = @setup.parts.build
   end
 
   # GET /setups/1/edit
@@ -33,6 +35,7 @@ class SetupsController < ApplicationController
         params[:setup_images]['image'].each do |i|
           @setup_image = @setup.setup_images.create!(:image => i, :setup_id => @setup.id)
         end
+        @part = @setup.parts.create!(:name => params[:parts]['part']['name'], :link => params[:parts]['part']['link'], :setup_id => @setup.id)
         format.html { redirect_to @setup, notice: 'Setup was successfully created.' }
         format.json { render :show, status: :created, location: @setup }
       else
@@ -74,6 +77,8 @@ class SetupsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def setup_params
-      params.require(:setup).permit(:name, :description, setup_images_attributes: [:id, :setup_id, :image])
+      params.require(:setup).permit(:name, :description,
+        setup_images_attributes: [:id, :setup_id, :image],
+        parts_attributes: [:id, :setup_id, :name, :link])
     end
 end
