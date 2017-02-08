@@ -16,6 +16,7 @@
     <% @parts.each do |part| %>
       <tr>
         <td><%= part.setup_id %></td>
+        <td><%= link_to Category.find(part.category_id).name, category_path(part.category_id) %></td>
         <td><%= part.name %></td>
         <td><%= part.link %></td>
         <td><%= link_to 'Show', part %></td>

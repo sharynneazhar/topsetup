@@ -15,6 +15,7 @@ class PartsController < ApplicationController
   # GET /parts/new
   def new
     @part = Part.new
+    @categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
   # GET /parts/1/edit
@@ -25,6 +26,7 @@ class PartsController < ApplicationController
   # POST /parts.json
   def create
     @part = Part.new(part_params)
+    @part.category_id = params[:category_id]
 
     respond_to do |format|
       if @part.save
@@ -40,6 +42,7 @@ class PartsController < ApplicationController
   # PATCH/PUT /parts/1
   # PATCH/PUT /parts/1.json
   def update
+    @part.category_id = params[:category_id]
     respond_to do |format|
       if @part.update(part_params)
         format.html { redirect_to @part, notice: 'Part was successfully updated.' }

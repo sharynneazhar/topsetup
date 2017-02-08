@@ -34,6 +34,8 @@
     <hr>
     <div class="setup-parts">
       <% @parts.each do |part| %>
+        <%= part.category_id if part.category_id.present? %>
+        <br>
         <%= link_to part.name, "#" %>
         <br>
         <%= link_to part.link, "#" %>

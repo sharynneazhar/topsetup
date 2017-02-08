@@ -35,6 +35,10 @@
 
   <%= f.fields_for :parts do |s| %>
     <div class="field">
+      <%= select_tag(:category_id, options_for_select(@categories),
+        :prompt => "Select one!", name: "parts[part][category]") %>
+    </div>
+    <div class="field">
       <%= s.label :name %>
       <%= s.text_field :name, name: "parts[part][name]" %>
     </div>

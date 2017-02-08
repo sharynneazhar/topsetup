@@ -20,6 +20,7 @@ class SetupsController < ApplicationController
     @setup = Setup.new
     @setup_image = @setup.setup_images.build
     @part = @setup.parts.build
+    @categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
   # GET /setups/1/edit
@@ -35,7 +36,7 @@ class SetupsController < ApplicationController
         params[:setup_images]['image'].each do |i|
           @setup_image = @setup.setup_images.create!(:image => i, :setup_id => @setup.id)
         end
-        @part = @setup.parts.create!(:name => params[:parts]['part']['name'], :link => params[:parts]['part']['link'], :setup_id => @setup.id)
+        @part = @setup.parts.create!(:name => params[:parts]['part']['name'], :link => params[:parts]['part']['link'], :category_id => params[:parts]['part']['category'], :setup_id => @setup.id)
         format.html { redirect_to @setup, notice: 'Setup was successfully created.' }
         format.json { render :show, status: :created, location: @setup }
       else
@@ -79,6 +80,6 @@ class SetupsController < ApplicationController
     def setup_params
       params.require(:setup).permit(:name, :description,
         setup_images_attributes: [:id, :setup_id, :image],
-        parts_attributes: [:id, :setup_id, :name, :link])
+        parts_attributes: [:id, :setup_id, :name, :link, :category_id])
     end
 end
