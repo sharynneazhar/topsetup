@@ -32,13 +32,13 @@
       by <%= link_to @setup_user.username, edit_user_registration_path %>
     </div>
     <hr>
-    <div class="setup-parts">
+    <div class="setup-parts list-group">
       <% @parts.each do |part| %>
-        <%= part.category_id if part.category_id.present? %>
-        <br>
-        <%= link_to part.name, "#" %>
-        <br>
-        <%= link_to part.link, "#" %>
+        <div class="list-group-item">
+          <p><%= Category.find(part.category_id).name if part.category_id.present? %></p>
+          <p><%= link_to part.name, "#" %></p>
+          <p><%= link_to part.link, "#" %></p>
+        </div>
       <% end %>
     </div>
   </div>

@@ -20,7 +20,7 @@ class SetupsController < ApplicationController
     @setup = Setup.new
     @setup_image = @setup.setup_images.build
     @part = @setup.parts.build
-    @categories = Category.all.map{|c| [ c.name, c.id ] }
+    @categories = Category.all.map{|c| c.name }
   end
 
   # GET /setups/1/edit
@@ -36,7 +36,14 @@ class SetupsController < ApplicationController
         params[:setup_images]['image'].each do |i|
           @setup_image = @setup.setup_images.create!(:image => i, :setup_id => @setup.id)
         end
-        @part = @setup.parts.create!(:name => params[:parts]['part']['name'], :link => params[:parts]['part']['link'], :category_id => params[:parts]['part']['category'], :setup_id => @setup.id)
+
+        params[:parts].each do |pt|
+          if pt['category'].present?
+            @categoryId = Category.find_by(name: pt['category']).id
+            @part = @setup.parts.create!(:name => pt['name'], :link => pt['link'], :setup_id => @setup.id, :category_id => @categoryId)
+          end
+        end
+
         format.html { redirect_to @setup, notice: 'Setup was successfully created.' }
         format.json { render :show, status: :created, location: @setup }
       else

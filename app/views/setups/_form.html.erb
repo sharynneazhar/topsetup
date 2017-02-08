@@ -34,18 +34,23 @@
   <br>
 
   <%= f.fields_for :parts do |s| %>
-    <div class="field">
-      <%= select_tag(:category_id, options_for_select(@categories),
-        :prompt => "Select one!", name: "parts[part][category]") %>
-    </div>
-    <div class="field">
-      <%= s.label :name %>
-      <%= s.text_field :name, name: "parts[part][name]" %>
-    </div>
-    <div class="field">
-      <%= s.label :link %>
-      <%= s.text_field :link, name: "parts[part][link]" %>
-    </div>
+    <% @categories.each do |cat| %>
+      <div class="form-inline">
+        <div class="field form-group">
+          <%= s.label :category_id %>
+          <%= select_tag(:category_id, options_for_select(@categories),
+            :prompt => "Select one!", name: "parts[][category]") %>
+        </div>
+        <div class="field form-group">
+          <%= s.label :name %>
+          <%= s.text_field :name, name: "parts[][name]" %>
+        </div>
+        <div class="field form-group">
+          <%= s.label :link %>
+          <%= s.text_field :link, name: "parts[][link]" %>
+        </div>
+      </div>
+    <% end %>
   <% end %>
 
   <br>
