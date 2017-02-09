@@ -4,9 +4,26 @@
 
 /* import other local scss files */
 @import "variables";
-@import "scaffolds";
 @import "buttons";
 @import "setups";
+
+html, body {
+  background-color: $bg;
+  color: $gray;
+  font-family: "Lato", "Open-Sans", sans-serif;
+  font-weight: $regular;
+}
+
+textarea,
+input:not([type=button]):not([type=reset]):not([type=submit]):not([type=file]) {
+  padding: 8px;
+  border: none;
+  background-color: $blueShaded;
+}
+
+label {
+  display: block;
+}
 
 /* flatten bootstrap css */
 .add-on,
@@ -39,16 +56,86 @@ textarea {
   background-image: none !important;
 }
 
-.link {
-  color: $bluePop;
-}
-
+.link,
 .link:hover {
   color: $bluePop;
 }
 
-/* home page styles */
+#notice {
+  color: green;
+}
 
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+/* navbar styles */
+.navbar {
+  background-color: transparent;
+  border: none;
+  color: $gray;
+  padding-top: 20px;
+
+  .navbar-brand {
+    padding-left: 0;
+    color: $gray;
+    font-size: 36px;
+    font-weight: $black;
+
+    span, {
+      color: $bluePop;
+    }
+  }
+
+  .navbar-brand:hover {
+    color: $gray;
+  }
+
+  .navbar-text a {
+    margin-left: 30px;
+    color: $gray;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  .navbar-link {
+    color: $gray;
+  }
+
+  .navbar-link:hover {
+    color: $bluePop;
+    text-decoration: none;
+  }
+}
+
+/* home page styles */
 .photo-grid {
   display: flex;
   flex-direction: row;
@@ -59,11 +146,16 @@ textarea {
 
 /* login page styles -- same styles for sign up */
 .login {
-  padding: 40px;
+  width: 75%;
+  margin: 40px auto;
+  padding: 50px;
+  background-color: $gray;
+  border-radius: 0 !important;
   color: $blueDark;
 
   h2 {
     font-weight: $black;
+    margin-top: 10px;
   }
 
   p {
@@ -72,6 +164,42 @@ textarea {
   }
 
   .well {
-    margin: 30px;
+    margin: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    -webkit-box-shadow: 3px 4px 5px 0px rgba(148,148,148,0.59) !important;
+    -moz-box-shadow: 3px 4px 5px 0px rgba(148,148,148,0.59) !important;
+    box-shadow: 3px 4px 5px 0px rgba(148,148,148,0.59) !important;
+
+    h2 {
+      font-weight: $bold;
+    }
+  }
+
+  .well:before {
+    content: "";
+    position:absolute;
+    width: 0;
+    height: 0;
+    top: 30px;
+    left: -14px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid #f5f5f5;
+    border-bottom: 15px solid transparent;
+    border-top: 15px solid transparent;
+}
+
+  .field {
+    margin-top: 25px;
+  }
+
+  .signup-field:not(:first-of-type) {
+    margin-top: 15px;
+  }
+
+  .login-input {
+    width: 100%;
+    border: 1px solid $bgAccent !important;
+    background-color: #f5f5f5 !important;
   }
 }
