@@ -136,13 +136,13 @@ textarea {
 }
 
 /* home page styles */
-.photo-grid {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+.grid {
+  margin-left: -10px;
+  
+  .grid-item {
+    margin: 10px;
+  }
 }
-
 
 /* login page styles -- same styles for sign up */
 .login {

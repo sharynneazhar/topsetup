@@ -54,3 +54,41 @@
   margin-top: 20px;
   margin-bottom: 30px;
 }
+
+.carousel-indicators.carousel-indicators li {
+  height: 100%;
+  width: auto;
+  border: 2px solid transparent;
+  border-radius: 0;
+}
+.carousel-indicators.carousel-indicators .active {
+  background-color: transparent;
+  border-color: $gray;
+}
+
+.setup-parts {
+
+  .list-group-item {
+    background-color: transparent;
+    padding: 10px 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0.5px solid $bgAccent;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .part-type {
+    text-transform: uppercase;
+    font-weight: $light;
+    color: $gray;
+  }
+
+  .part-name a {
+    color: $bluePop;
+    letter-spacing: 1px;
+  }
+}

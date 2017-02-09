@@ -9,11 +9,11 @@
   <div class="col-md-8">
     <div class="setup-images row">
       <div class="hero-image col-md-10">
-        <%= link_to image_tag(@setup_images.first.image.hero.url, :class => "img-responsive"), "#", data: {toggle: "modal", target: "#myModal"} %>
+        <%= link_to image_tag(@setup_images.first.image.hero.url, :class => "img-responsive"), "#imagesModal", "data-toggle": "modal" %>
       </div>
       <div class="thumbnails col-md-2">
         <% @setup_images.each do |image| %>
-          <%= link_to image_tag(image.image.thumb.url, :class => "img-responsive"), "#", data: {toggle: "modal", target: "#myModal"} %>
+          <%= link_to image_tag(image.image.thumb.url, :class => "img-responsive"), "#imagesModal", "data-toggle": "modal" %>
         <% end %>
       </div>
     </div>
@@ -31,59 +31,16 @@
       <h1><%= @setup.name %></h1>
       by <%= link_to @setup_user.username, edit_user_registration_path %>
     </div>
-    <hr>
+    <hr style="margin-bottom:8px;">
     <div class="setup-parts list-group">
       <% @parts.each do |part| %>
         <div class="list-group-item">
-          <p><%= Category.find(part.category_id).name if part.category_id.present? %></p>
-          <p><%= link_to part.name, "#" %></p>
-          <p><%= link_to part.link, "#" %></p>
+          <p class="part-type"><%= Category.find(part.category_id).name if part.category_id.present? %></p>
+          <p class="part-name"><%= link_to part.name, part.link, :target => "_blank" %></p>
         </div>
       <% end %>
     </div>
   </div>
 </div>
 
-
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-
-
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">
-              <%= image_tag(@setup_images.first.image_url) %>
-            </div>
-            <% @setup_images.drop(1).each do |image| %>
-               <div class="item">
-                 <%= image_tag(image.image_url, :class => "img-responsive") %>
-               </div>
-            <% end %>
-          </div>
-
-          <!-- Controls -->
-          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+<%= render "imageModal" %>

@@ -5,10 +5,10 @@
 
 <br>
 
-<div style="photo-grid">
+<div class="grid">
   <% @setups.each do |setup| %>
     <% if setup.setup_images %>
-      <%= link_to image_tag(setup.setup_images[0].image.thumbBig.url), setup %>
+      <%= link_to image_tag(setup.setup_images[0].image.thumbBig.url), setup, :class => "grid-item" %>
     <% end %>
   <% end %>
 </div>
