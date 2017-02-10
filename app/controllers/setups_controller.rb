@@ -3,8 +3,14 @@ class SetupsController < ApplicationController
 
   # GET /setups
   # GET /setups.json
-  def index
+  def home
     @setups = Setup.all
+  end
+
+  # GET /setups
+  # GET /setups.json
+  def index
+    @setups = Setup.where(user_id: current_user.id)
   end
 
   # GET /setups/1
