@@ -32,9 +32,6 @@ gem 'carrierwave'
 # Use MiniMagick for image processing
 gem 'mini_magick'
 
-# enables Rails server to deliver assets
-gem 'rails_12factor', group: :production
-
 # Figaro to securely configure application
 # gem 'figaro'
 
