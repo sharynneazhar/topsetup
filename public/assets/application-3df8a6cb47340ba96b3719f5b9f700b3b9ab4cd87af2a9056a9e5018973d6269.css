@@ -2413,7 +2413,7 @@ pre code {
 }
 
 /* line 11, /Users/sharynneazhar/.rvm/gems/ruby-2.3.3/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .grid .grid-item, .col-lg-2, .grid .grid-item, .col-xs-3, .col-sm-3, .grid .grid-item, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .grid .grid-item, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -2421,7 +2421,7 @@ pre code {
 }
 
 /* line 27, /Users/sharynneazhar/.rvm/gems/ruby-2.3.3/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .grid .grid-item, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
 }
 
@@ -2451,7 +2451,7 @@ pre code {
 }
 
 /* line 35, /Users/sharynneazhar/.rvm/gems/ruby-2.3.3/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-.col-xs-6 {
+.col-xs-6, .grid .grid-item {
   width: 50%;
 }
 
@@ -2682,7 +2682,7 @@ pre code {
 
 @media (min-width: 768px) {
   /* line 27, /Users/sharynneazhar/.rvm/gems/ruby-2.3.3/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+  .col-sm-1, .col-sm-2, .col-sm-3, .grid .grid-item, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left;
   }
 
@@ -2697,7 +2697,7 @@ pre code {
   }
 
   /* line 35, /Users/sharynneazhar/.rvm/gems/ruby-2.3.3/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-sm-3 {
+  .col-sm-3, .grid .grid-item {
     width: 25%;
   }
 
@@ -2943,7 +2943,7 @@ pre code {
 }
 @media (min-width: 992px) {
   /* line 27, /Users/sharynneazhar/.rvm/gems/ruby-2.3.3/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .grid .grid-item, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
   }
 
@@ -2953,7 +2953,7 @@ pre code {
   }
 
   /* line 35, /Users/sharynneazhar/.rvm/gems/ruby-2.3.3/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-md-2 {
+  .col-md-2, .grid .grid-item {
     width: 16.66666667%;
   }
 
@@ -3204,7 +3204,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   /* line 27, /Users/sharynneazhar/.rvm/gems/ruby-2.3.3/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+  .col-lg-1, .col-lg-2, .grid .grid-item, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     float: left;
   }
 
@@ -3214,7 +3214,7 @@ pre code {
   }
 
   /* line 35, /Users/sharynneazhar/.rvm/gems/ruby-2.3.3/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-lg-2 {
+  .col-lg-2, .grid .grid-item {
     width: 16.66666667%;
   }
 
@@ -8700,13 +8700,13 @@ button.close {
 
 @media (max-width: 767px) {
   /* line 18, /Users/sharynneazhar/.rvm/gems/ruby-2.3.3/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_responsive-visibility.scss */
-  .hidden-xs {
+  .hidden-xs, .hide-mobile {
     display: none !important;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 18, /Users/sharynneazhar/.rvm/gems/ruby-2.3.3/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/mixins/_responsive-visibility.scss */
-  .hidden-sm {
+  .hidden-sm, .hide-mobile {
     display: none !important;
   }
 }
@@ -8913,6 +8913,21 @@ button.close {
 /* import other local scss files */
 /* colors */
 /* font-weights */
+/* Place this on a parent element to vertically
+   center all children items */
+/* line 3, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/helpers.scss */
+.vcenter {
+  display: flex;
+  align-items: center;
+}
+
+/* Hides elememts in mobile and tablet views */
+/* Placeholder styles */
+/* line 14, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/helpers.scss */
+.ph-image {
+  background-color: #485A6A;
+}
+
 /* line 1, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/buttons.scss */
 input[type=button],
 input[type=reset],
@@ -8957,6 +8972,107 @@ input[type=submit]:hover {
   color: #fff;
 }
 
+/* line 1, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/navbar.scss */
+.navbar {
+  background-color: transparent;
+  border: none;
+  color: #DFE3E2;
+  padding-top: 20px;
+}
+/* line 7, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/navbar.scss */
+.navbar .navbar-brand {
+  padding-left: 0;
+  color: #DFE3E2;
+  font-size: 24px;
+  font-weight: 900;
+}
+/* line 13, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/navbar.scss */
+.navbar .navbar-brand span {
+  color: #54AAC8;
+}
+/* line 18, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/navbar.scss */
+.navbar .navbar-brand:hover {
+  color: #DFE3E2;
+}
+/* line 22, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/navbar.scss */
+.navbar .navbar-text,
+.navbar .navbar-collapse {
+  margin-right: 0;
+  padding-right: 0;
+}
+/* line 28, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/navbar.scss */
+.navbar .navbar-text a {
+  margin-left: 30px;
+  color: #DFE3E2;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+/* line 35, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/navbar.scss */
+.navbar .navbar-link {
+  color: #DFE3E2;
+}
+/* line 39, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/navbar.scss */
+.navbar .navbar-link:hover {
+  color: #54AAC8;
+  text-decoration: none;
+}
+
+/* line 1, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/login.scss */
+.login {
+  width: 75%;
+  margin: 40px auto;
+  padding: 50px;
+  background-color: #DFE3E2;
+  border-radius: 0 !important;
+  color: #303D48;
+}
+/* line 9, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/login.scss */
+.login h2 {
+  font-weight: 900;
+  margin-top: 10px;
+}
+/* line 14, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/login.scss */
+.login p {
+  font-size: 16px;
+  font-weight: 400;
+}
+/* line 19, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/login.scss */
+.login .well {
+  margin: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  -webkit-box-shadow: 3px 4px 5px 0px rgba(148, 148, 148, 0.59) !important;
+  -moz-box-shadow: 3px 4px 5px 0px rgba(148, 148, 148, 0.59) !important;
+  box-shadow: 3px 4px 5px 0px rgba(148, 148, 148, 0.59) !important;
+}
+/* line 27, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/login.scss */
+.login .well h2 {
+  font-weight: 700;
+}
+/* line 32, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/login.scss */
+.login .well:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 30px;
+  left: -14px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid #f5f5f5;
+  border-bottom: 15px solid transparent;
+  border-top: 15px solid transparent;
+}
+/* line 45, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/login.scss */
+.login .signup-field:not(:first-of-type) {
+  margin-top: 15px;
+}
+/* line 49, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/login.scss */
+.login .login-input {
+  width: 100%;
+  border: 1px solid #485A6A !important;
+  background-color: #f5f5f5 !important;
+}
+
 /* line 5, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
 .setup-information {
   font-size: 16px;
@@ -8975,25 +9091,28 @@ input[type=submit]:hover {
 }
 
 /* line 21, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
-.setup_images {
-  height: 33%;
+.setup-images {
+  max-height: 450px;
   overflow: hidden;
 }
-
-/* line 26, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
-.thumbnails {
+/* line 25, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
+.setup-images .hero-image img {
+  width: 100%;
+}
+/* line 29, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
+.setup-images .thumbnails {
   display: flex;
   flex-direction: column;
   max-height: 400px;
   overflow-y: scroll;
   margin-left: -15px;
 }
-/* line 33, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
-.thumbnails a:not(:last-child) {
+/* line 36, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
+.setup-images .thumbnails a:not(:last-child) {
   margin-bottom: 10px;
 }
 
-/* line 38, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
+/* line 43, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
 .btn-favorite {
   display: flex;
   align-items: center;
@@ -9001,38 +9120,47 @@ input[type=submit]:hover {
   padding-left: 0;
   background-color: transparent;
 }
-/* line 45, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
+/* line 50, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
 .btn-favorite i {
   margin-right: 8px;
   color: #FA588F;
 }
 
-/* line 51, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
+/* line 56, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
 .btn-favorite:hover {
   color: #54AAC8;
 }
 
-/* line 55, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
+/* line 60, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
 .setup-description {
   margin-top: 20px;
   margin-bottom: 30px;
 }
 
-/* line 60, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
-.carousel-indicators.carousel-indicators li {
+/* line 66, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
+.modal-content .img-responsive,
+.modal-content .thumbnail > img,
+.modal-content .thumbnail a > img,
+.modal-content .carousel-inner > .item > img,
+.modal-content .carousel-inner > .item > a > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* line 76, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
+.modal-content .carousel-indicators.carousel-indicators li {
   height: 100%;
   width: auto;
   border: 2px solid transparent;
   border-radius: 0;
 }
-
-/* line 66, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
-.carousel-indicators.carousel-indicators .active {
+/* line 82, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
+.modal-content .carousel-indicators.carousel-indicators .active {
   background-color: transparent;
   border-color: #DFE3E2;
 }
 
-/* line 73, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
+/* line 89, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
 .setup-parts .list-group-item {
   background-color: transparent;
   padding: 10px 0;
@@ -9041,23 +9169,23 @@ input[type=submit]:hover {
   border-right: 0;
   border-bottom: 0.5px solid #485A6A;
 }
-/* line 82, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
+/* line 98, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
 .setup-parts p {
   margin: 0;
 }
-/* line 86, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
+/* line 102, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
 .setup-parts .part-type {
   text-transform: uppercase;
   font-weight: 300;
   color: #DFE3E2;
 }
-/* line 92, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
+/* line 108, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/setups.scss */
 .setup-parts .part-name a {
   color: #54AAC8;
   letter-spacing: 1px;
 }
 
-/* line 10, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
+/* line 13, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
 html, body {
   background-color: #303D48;
   color: #DFE3E2;
@@ -9065,7 +9193,7 @@ html, body {
   font-weight: 400;
 }
 
-/* line 17, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
+/* line 20, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
 textarea,
 input:not([type=button]):not([type=reset]):not([type=submit]):not([type=file]) {
   padding: 8px;
@@ -9073,13 +9201,84 @@ input:not([type=button]):not([type=reset]):not([type=submit]):not([type=file]) {
   background-color: #485A6A;
 }
 
-/* line 24, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
+/* line 27, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
 label {
   display: block;
 }
 
+/* line 31, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
+.container {
+  width: 70%;
+}
+
+@media (max-width: 768px) {
+  /* line 36, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
+  .container {
+    width: 98%;
+  }
+}
+/* line 41, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
+.link,
+.link:hover {
+  color: #54AAC8;
+}
+
+/* line 46, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
+.field {
+  margin-top: 25px;
+}
+
+/* home page styles */
+/* line 51, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
+.grid {
+  margin-top: 25px;
+}
+/* line 54, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
+.grid .grid-item {
+  margin-bottom: 20px;
+}
+
+/* flash message styles */
+/* line 61, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
+#notice {
+  color: green;
+}
+
+/* line 65, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 71, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 79, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 90, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
 /* flatten bootstrap css */
-/* line 29, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
+/* line 97, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
 .add-on,
 .alert,
 .badge,
@@ -9108,183 +9307,4 @@ textarea {
   border-radius: 0 !important;
   border-collapse: collapse !important;
   background-image: none !important;
-}
-
-/* line 59, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-.link,
-.link:hover {
-  color: #54AAC8;
-}
-
-/* line 64, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-.field {
-  margin-top: 25px;
-}
-
-/* line 68, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-#notice {
-  color: green;
-}
-
-/* line 72, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
-}
-
-/* line 78, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-#error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-}
-/* line 86, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-#error_explanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  margin-bottom: 0;
-  background-color: #c00;
-  color: #fff;
-}
-/* line 97, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-#error_explanation ul li {
-  font-size: 12px;
-  list-style: square;
-}
-
-/* navbar styles */
-/* line 104, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-.navbar {
-  background-color: transparent;
-  border: none;
-  color: #DFE3E2;
-  padding-top: 20px;
-}
-/* line 110, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-.navbar .navbar-brand {
-  padding-left: 0;
-  color: #DFE3E2;
-  font-size: 24px;
-  font-weight: 900;
-}
-/* line 116, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-.navbar .navbar-brand span {
-  color: #54AAC8;
-}
-/* line 121, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-.navbar .navbar-brand:hover {
-  color: #DFE3E2;
-}
-/* line 125, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-.navbar .navbar-text,
-.navbar .navbar-collapse {
-  margin-right: 0;
-  padding-right: 0;
-}
-/* line 131, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-.navbar .navbar-text a {
-  margin-left: 30px;
-  color: #DFE3E2;
-  font-size: 16px;
-  text-transform: uppercase;
-}
-/* line 138, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-.navbar .navbar-link {
-  color: #DFE3E2;
-}
-/* line 142, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-.navbar .navbar-link:hover {
-  color: #54AAC8;
-  text-decoration: none;
-}
-
-/* home page styles */
-/* line 149, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 20px;
-}
-/* line 155, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-.grid .grid-item {
-  margin: 8px;
-  background-color: transparent;
-  border: 0;
-}
-
-@media (min-width: 962px) {
-  /* line 163, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-  .grid .thumbnail {
-    max-width: 255px;
-  }
-}
-/* login page styles -- same styles for sign up */
-/* line 169, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-.login {
-  width: 75%;
-  margin: 40px auto;
-  padding: 50px;
-  background-color: #DFE3E2;
-  border-radius: 0 !important;
-  color: #303D48;
-}
-/* line 177, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-.login h2 {
-  font-weight: 900;
-  margin-top: 10px;
-}
-/* line 182, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-.login p {
-  font-size: 16px;
-  font-weight: 400;
-}
-/* line 187, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-.login .well {
-  margin: 0;
-  padding-left: 30px;
-  padding-right: 30px;
-  -webkit-box-shadow: 3px 4px 5px 0px rgba(148, 148, 148, 0.59) !important;
-  -moz-box-shadow: 3px 4px 5px 0px rgba(148, 148, 148, 0.59) !important;
-  box-shadow: 3px 4px 5px 0px rgba(148, 148, 148, 0.59) !important;
-}
-/* line 195, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-.login .well h2 {
-  font-weight: 700;
-}
-/* line 200, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-.login .well:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  top: 30px;
-  left: -14px;
-  border-left: 15px solid transparent;
-  border-right: 15px solid #f5f5f5;
-  border-bottom: 15px solid transparent;
-  border-top: 15px solid transparent;
-}
-/* line 213, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-.login .signup-field:not(:first-of-type) {
-  margin-top: 15px;
-}
-/* line 217, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-.login .login-input {
-  width: 100%;
-  border: 1px solid #485A6A !important;
-  background-color: #f5f5f5 !important;
-}
-
-/* line 224, /Users/sharynneazhar/Development/topsetup/app/assets/stylesheets/application.scss */
-.mobile {
-  width: 90%;
-  text-align: center;
 }
