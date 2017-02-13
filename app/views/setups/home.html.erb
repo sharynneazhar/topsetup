@@ -1,12 +1,14 @@
-<div style="display:flex;align-items:center;">
+<div class="vcenter">
   <h4>Recent Submissions</h4>
   <i class="material-icons">expand_more</i>
 </div>
 
-<div class="grid">
+<div class="grid row">
   <% @setups.each do |setup| %>
-    <% if setup.setup_images %>
-      <%= link_to image_tag(setup.setup_images.first.image.thumbBig.url), setup, :class => "grid-item" %>
+    <% unless setup.setup_images.blank? %>
+      <div class="grid-item">
+        <%= link_to image_tag(setup.setup_images.first.image.thumbBig.url, :class => "img-responsive"), setup %>
+      </div>
     <% end %>
   <% end %>
 </div>

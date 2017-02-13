@@ -1,0 +1,54 @@
+.login {
+  width: 75%;
+  margin: 40px auto;
+  padding: 50px;
+  background-color: $gray;
+  border-radius: 0 !important;
+  color: $blueDark;
+
+  h2 {
+    font-weight: $black;
+    margin-top: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: $regular;
+  }
+
+  .well {
+    margin: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    -webkit-box-shadow: 3px 4px 5px 0px rgba(148,148,148,0.59) !important;
+    -moz-box-shadow: 3px 4px 5px 0px rgba(148,148,148,0.59) !important;
+    box-shadow: 3px 4px 5px 0px rgba(148,148,148,0.59) !important;
+
+    h2 {
+      font-weight: $bold;
+    }
+  }
+
+  .well:before {
+    content: "";
+    position:absolute;
+    width: 0;
+    height: 0;
+    top: 30px;
+    left: -14px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid #f5f5f5;
+    border-bottom: 15px solid transparent;
+    border-top: 15px solid transparent;
+  }
+
+  .signup-field:not(:first-of-type) {
+    margin-top: 15px;
+  }
+
+  .login-input {
+    width: 100%;
+    border: 1px solid $bgAccent !important;
+    background-color: #f5f5f5 !important;
+  }
+}

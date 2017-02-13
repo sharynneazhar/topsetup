@@ -18,21 +18,26 @@
   }
 }
 
-.setup_images {
-  height: 33%;
+.setup-images {
+  max-height: 450px;
   overflow: hidden;
-}
 
-.thumbnails {
-  display: flex;
-  flex-direction: column;
-  max-height: 400px;
-  overflow-y: scroll;
-  margin-left: -15px;
-
-  a:not(:last-child) {
-    margin-bottom: 10px;
+  .hero-image img {
+    width: 100%;
   }
+
+  .thumbnails {
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+    overflow-y: scroll;
+    margin-left: -15px;
+
+    a:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
 }
 
 .btn-favorite {
@@ -57,19 +62,30 @@
   margin-bottom: 30px;
 }
 
-.carousel-indicators.carousel-indicators li {
-  height: 100%;
-  width: auto;
-  border: 2px solid transparent;
-  border-radius: 0;
-}
-.carousel-indicators.carousel-indicators .active {
-  background-color: transparent;
-  border-color: $gray;
+.modal-content {
+  .img-responsive,
+  .thumbnail > img,
+  .thumbnail a > img,
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .carousel-indicators.carousel-indicators li {
+    height: 100%;
+    width: auto;
+    border: 2px solid transparent;
+    border-radius: 0;
+  }
+  .carousel-indicators.carousel-indicators .active {
+    background-color: transparent;
+    border-color: $gray;
+  }
 }
 
 .setup-parts {
-
   .list-group-item {
     background-color: transparent;
     padding: 10px 0;

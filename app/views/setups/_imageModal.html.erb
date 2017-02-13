@@ -1,5 +1,5 @@
 <div class="modal fade" id="imagesModal" tabindex="-1" role="dialog" aria-labelledby="images">
-  <div class="modal-dialog modal-lg" role="document"
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div id="carousel" class="carousel slide" data-interval="false">
 
@@ -22,7 +22,7 @@
         </a>
 
         <!-- Indicators -->
-        <ol class="carousel-indicators">
+        <ol class="carousel-indicators hide-mobile">
           <% @setup_images.each_with_index do |image, idx| %>
             <%= content_tag :li, image_tag(image.image.thumb.url,  :class => "img-responsive") , data: {
               target: '#carousel', slide_to: idx}, class: (idx == 0 ? 'active' : nil) %>

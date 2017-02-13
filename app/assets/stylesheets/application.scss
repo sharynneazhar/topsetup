@@ -4,7 +4,10 @@
 
 /* import other local scss files */
 @import "variables";
+@import "helpers";
 @import "buttons";
+@import "navbar";
+@import "login";
 @import "setups";
 
 html, body {
@@ -25,35 +28,14 @@ label {
   display: block;
 }
 
-/* flatten bootstrap css */
-.add-on,
-.alert,
-.badge,
-.btn,
-.dropdown-menu,
-.label,
-.modal,
-.nav > .active > a,
-.navbar,
-.navbar-inner,
-.popover,
-.progress,
-.table-bordered,
-.tooltip,
-.tooltip-inner,
-.well,
-input,
-pre,
-select,
-textarea {
-  -moz-box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
-  border-radius: 0 !important;
-  border-collapse: collapse !important;
-  background-image: none !important;
+.container {
+  width: 70%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 98%;
+  }
 }
 
 .link,
@@ -65,6 +47,17 @@ textarea {
   margin-top: 25px;
 }
 
+/* home page styles */
+.grid {
+  margin-top: 25px;
+
+  .grid-item {
+    @extend .col-xs-6, .col-sm-3, .col-md-2, .col-lg-2;
+    margin-bottom: 20px;
+  }
+}
+
+/* flash message styles */
 #notice {
   color: green;
 }
@@ -100,128 +93,33 @@ textarea {
   }
 }
 
-/* navbar styles */
-.navbar {
-  background-color: transparent;
-  border: none;
-  color: $gray;
-  padding-top: 20px;
-
-  .navbar-brand {
-    padding-left: 0;
-    color: $gray;
-    font-size: 24px;
-    font-weight: $black;
-
-    span, {
-      color: $bluePop;
-    }
-  }
-
-  .navbar-brand:hover {
-    color: $gray;
-  }
-
-  .navbar-text,
-  .navbar-collapse {
-    margin-right: 0;
-    padding-right: 0;
-  }
-
-  .navbar-text a {
-    margin-left: 30px;
-    color: $gray;
-    font-size: 16px;
-    text-transform: uppercase;
-  }
-
-  .navbar-link {
-    color: $gray;
-  }
-
-  .navbar-link:hover {
-    color: $bluePop;
-    text-decoration: none;
-  }
-}
-
-/* home page styles */
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 20px;
-
-  .grid-item {
-    margin: 8px;
-    background-color: transparent;
-    border: 0;
-  }
-}
-
-@media (min-width: 962px) {
-  .grid .thumbnail {
-    max-width: 255px;
-  }
-}
-
-/* login page styles -- same styles for sign up */
-.login {
-  width: 75%;
-  margin: 40px auto;
-  padding: 50px;
-  background-color: $gray;
+/* flatten bootstrap css */
+.add-on,
+.alert,
+.badge,
+.btn,
+.dropdown-menu,
+.label,
+.modal,
+.nav > .active > a,
+.navbar,
+.navbar-inner,
+.popover,
+.progress,
+.table-bordered,
+.tooltip,
+.tooltip-inner,
+.well,
+input,
+pre,
+select,
+textarea {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
   border-radius: 0 !important;
-  color: $blueDark;
-
-  h2 {
-    font-weight: $black;
-    margin-top: 10px;
-  }
-
-  p {
-    font-size: 16px;
-    font-weight: $regular;
-  }
-
-  .well {
-    margin: 0;
-    padding-left: 30px;
-    padding-right: 30px;
-    -webkit-box-shadow: 3px 4px 5px 0px rgba(148,148,148,0.59) !important;
-    -moz-box-shadow: 3px 4px 5px 0px rgba(148,148,148,0.59) !important;
-    box-shadow: 3px 4px 5px 0px rgba(148,148,148,0.59) !important;
-
-    h2 {
-      font-weight: $bold;
-    }
-  }
-
-  .well:before {
-    content: "";
-    position:absolute;
-    width: 0;
-    height: 0;
-    top: 30px;
-    left: -14px;
-    border-left: 15px solid transparent;
-    border-right: 15px solid #f5f5f5;
-    border-bottom: 15px solid transparent;
-    border-top: 15px solid transparent;
-  }
-
-  .signup-field:not(:first-of-type) {
-    margin-top: 15px;
-  }
-
-  .login-input {
-    width: 100%;
-    border: 1px solid $bgAccent !important;
-    background-color: #f5f5f5 !important;
-  }
-}
-
-.mobile {
-  width: 90%;
-  text-align: center;
+  border-collapse: collapse !important;
+  background-image: none !important;
 }

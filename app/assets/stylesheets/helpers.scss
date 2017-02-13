@@ -1,0 +1,16 @@
+/* Place this on a parent element to vertically
+   center all children items */
+.vcenter {
+  display: flex;
+  align-items: center;
+}
+
+/* Hides elememts in mobile and tablet views */
+.hide-mobile {
+  @extend .hidden-xs, .hidden-sm;
+}
+
+/* Placeholder styles */
+.ph-image {
+  background-color: $bgAccent;
+}

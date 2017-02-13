@@ -8,16 +8,18 @@
 
 <div class="row">
   <div class="col-md-8">
-    <div class="setup-images row">
-      <div class="hero-image col-md-10">
-        <%= link_to image_tag(@setup_images.first.image.hero.url, :class => "img-responsive"), "#imagesModal", "data-toggle": "modal" %>
+    <% unless @setup_images.blank? %>
+      <div class="setup-images row">
+        <div class="hero-image col-md-10">
+          <%= link_to image_tag(@setup_images.first.image.hero.url, :class => "img-responsive"), "#imagesModal", "data-toggle": "modal" %>
+        </div>
+        <div class="thumbnails col-md-2 hide-mobile">
+          <% @setup_images.each do |image| %>
+            <%= link_to image_tag(image.image.thumbBig.url, :class => "img-responsive"), "#imagesModal", "data-toggle": "modal" %>
+          <% end %>
+        </div>
       </div>
-      <div class="thumbnails col-md-2">
-        <% @setup_images.each do |image| %>
-          <%= link_to image_tag(image.image.thumb.url, :class => "img-responsive"), "#imagesModal", "data-toggle": "modal" %>
-        <% end %>
-      </div>
-    </div>
+    <% end %>
     <button class="btn btn-favorite"><i class="material-icons">favorite_border</i>SAVE TO FAVORITES</button>
     <div class="setup-description">
       <%= @setup.description %>

@@ -1,0 +1,43 @@
+.navbar {
+  background-color: transparent;
+  border: none;
+  color: $gray;
+  padding-top: 20px;
+
+  .navbar-brand {
+    padding-left: 0;
+    color: $gray;
+    font-size: 24px;
+    font-weight: $black;
+
+    span, {
+      color: $bluePop;
+    }
+  }
+
+  .navbar-brand:hover {
+    color: $gray;
+  }
+
+  .navbar-text,
+  .navbar-collapse {
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .navbar-text a {
+    margin-left: 30px;
+    color: $gray;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  .navbar-link {
+    color: $gray;
+  }
+
+  .navbar-link:hover {
+    color: $bluePop;
+    text-decoration: none;
+  }
+}
