@@ -61,6 +61,9 @@ gem 'turbolinks', '~> 5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+
+  # Gem for outputting better and more useful errors
+  gem "better_errors"
 end
 
 group :development do

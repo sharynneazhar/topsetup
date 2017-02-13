@@ -6,7 +6,7 @@
 <div class="grid">
   <% @setups.each do |setup| %>
     <% if setup.setup_images %>
-      <%= link_to image_tag(setup.setup_images[0].image.thumbBig.url), setup, :class => "grid-item" %>
+      <%= link_to image_tag(setup.setup_images.first.image.thumbBig.url), setup, :class => "grid-item" %>
     <% end %>
   <% end %>
 </div>
