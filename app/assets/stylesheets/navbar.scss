@@ -1,8 +1,11 @@
 .navbar {
   width: 100%;
+  margin-bottom: 25px;
   background-color: #303D48;
   border: none;
   color: $gray;
+
+  @extend .dark-shadow;
 
   .navbar-container {
     max-width: 962px;

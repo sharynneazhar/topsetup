@@ -40,9 +40,7 @@
 
     .btn-login {
       border-radius: 4px;
-      -webkit-box-shadow: 0px 2px 4px 0px rgba(4, 14, 31, 0.5) !important;
-      -moz-box-shadow: 0px 2px 4px 0px rgba(4, 14, 31, 0.5) !important;
-      box-shadow: 0px 2px 4px 0px rgba(4, 14, 31, 0.5) !important;
+      @extend .dark-shadow;
     }
   }
 
@@ -51,9 +49,6 @@
     margin-top: 15px;
     border-radius: 4px;
     background-color: $bgAccent;
-    // -webkit-box-shadow: 1px 2px 4px 0px rgba(4, 14, 31, 0.5) !important;
-    // -moz-box-shadow: 1px 2px 4px 0px rgba(4, 14, 31, 0.5) !important;
-    // box-shadow: 1px 2px 4px 0px rgba(4, 14, 31, 0.5) !important;
   }
 
   .form-field:not(.first) {

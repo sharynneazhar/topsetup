@@ -6,12 +6,14 @@
 @import "variables";
 @import "helpers";
 @import "buttons";
+@import "form";
 @import "navbar";
 @import "login";
 @import "setups";
 
 html, body {
   margin: 0 auto;
+  padding-bottom: 50px;
   background-color: $bg;
   font-family: "Lato", "Open-Sans", sans-serif;
   font-weight: $regular;
@@ -52,11 +54,15 @@ label {
 
 /* home page styles */
 .grid {
-  margin-top: 25px;
+  margin-top: 18px;
 
   .grid-item {
-    @extend .col-xs-6, .col-sm-3, .col-md-2, .col-lg-2;
-    margin-bottom: 20px;
+    @extend .col-xs-6, .col-sm-3, .col-md-3, .col-lg-3;
+    margin-bottom: 2.5em;
+  }
+
+  img {
+    @extend .dark-shadow;
   }
 }
 
@@ -105,8 +111,6 @@ label {
 .label,
 .modal,
 .nav > .active > a,
-.navbar,
-.navbar-inner,
 .popover,
 .progress,
 .table-bordered,

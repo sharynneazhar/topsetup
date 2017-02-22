@@ -1,0 +1,57 @@
+.setup-form {
+  max-width: 100%;
+  margin-top: 30px;
+  padding-top: 50px;
+  text-align: center;
+  color: #FFF;
+
+  .social-setup-form-form form {
+    margin-top: 15px;
+    border-radius: 4px;
+    background-color: $bgAccent;
+  }
+
+  .setup-form-label {
+    font-size: 24px;
+    font-weight: $light;
+    margin-bottom: 25px;
+  }
+
+  .setup-form-input {
+    width: 100%;
+    outline: 0;
+    border: 0 !important;
+    border-bottom: 1px solid $bluePop !important;
+    background-color: $bg !important;
+    font-size: 24px;
+    font-weight: $light;
+    text-align: center;
+  }
+
+  .setup-form-input:focus,
+  .setup-form-input:active {
+    border: 0 !important;
+    border-bottom: 1px solid $bluePop !important;
+    background-color: $bg !important;
+    text-align: center;
+  }
+
+  .setup-form-btn {
+    @extend .dark-shadow;
+    font-size: 18px;
+    margin-top: 55px;
+    margin-bottom: 25px;
+    padding: 8px 45px;
+  }
+
+  .link {
+    font-size: 14px;
+    font-weight: $light;
+  }
+}
+
+@media (min-width: 768px) {
+  .setup-form {
+    max-width: 450px;
+  }
+}

@@ -7,7 +7,7 @@
   <% @setups.each do |setup| %>
     <% unless setup.setup_images.blank? %>
       <div class="grid-item">
-        <%= link_to image_tag(setup.setup_images.first.image.thumbBig.url, :class => "img-responsive"), setup %>
+        <%= link_to image_tag(setup.setup_images.first.image.hero.url, :class => "img-responsive"), setup %>
       </div>
     <% end %>
   <% end %>

@@ -1,12 +1,13 @@
-<div style="vcenter">
-  <h3>My Setups</h3>
+<div class="vcenter">
+  <h4 style="margin-right:15px;">My Setups</h4>
+  <i class="fa fa-caret-down fa-lg"></i>
 </div>
 
 <div class="grid row">
   <% @setups.each do |setup| %>
     <% if !setup.setup_images.blank? %>
       <div class="grid-item">
-        <%= link_to image_tag(setup.setup_images.first.image.thumbBig.url, :class => "img-responsive"), setup %>
+        <%= link_to image_tag(setup.setup_images.first.image.hero.url, :class => "img-responsive"), setup %>
       </div>
     <% else %>
       <div class="grid-item">
