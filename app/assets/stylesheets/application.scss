@@ -1,6 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "material_icons";
+@import "font-awesome";
 
 /* import other local scss files */
 @import "variables";
@@ -11,10 +11,12 @@
 @import "setups";
 
 html, body {
+  max-width: 962px;
+  margin: 0 auto;
   background-color: $bg;
-  color: $gray;
   font-family: "Lato", "Open-Sans", sans-serif;
   font-weight: $regular;
+  color: $gray;
 }
 
 textarea,
@@ -117,9 +119,29 @@ textarea {
   -moz-box-shadow: none !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
+  border-collapse: collapse !important;
+  background-image: none !important;
+}
+
+.add-on,
+.alert,
+.badge,
+.dropdown-menu,
+.label,
+.modal,
+.nav > .active > a,
+.navbar,
+.navbar-inner,
+.popover,
+.progress,
+.table-bordered,
+.tooltip,
+.tooltip-inner,
+.well,
+pre,
+select,
+textarea {
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   border-radius: 0 !important;
-  border-collapse: collapse !important;
-  background-image: none !important;
 }

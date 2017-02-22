@@ -52,8 +52,12 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 # gem 'coffee-rails', '~> 4.2'
+
 # Google Material icons
-gem 'material_icons'
+#gem 'material_icons'
+
+# Font awesome
+gem 'font-awesome-rails'
 
 # Asset compilation
 gem 'rails_12factor', group: :production

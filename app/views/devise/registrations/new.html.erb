@@ -1,30 +1,33 @@
-<div class="jumbotron login">
-  <div class="row">
-    <div class="col-md-7">
-      <h2>Let's get started!</h2>
-      <p>Already have an account? <%= link_to "Log in", new_session_path(resource_name), :class => 'link' %> here!</p>
-    </div>
-    <div class="col-md-5">
-      <div class="well">
-        <h2>Sign up</h2>
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-          <div class="field signup-field">
-            <%= f.text_field :email, autofocus: true, placeholder: "email address", :class => "login-input" %>
-          </div>
-          <div class="field signup-field">
-            <%= f.text_field :username, autofocus: true, placeholder: "username", :class => "login-input" %>
-          </div>
-          <div class="field signup-field">
-            <%= f.password_field :password, autocomplete: "off", placeholder: "password", :class => "login-input" %>
-            <% if @minimum_password_length %>
-              <small class="text-muted pull-right">Minimum <%= @minimum_password_length %> characters</small>
-            <% end %>
-          </div>
-          <div class="actions text-center">
-            <%= f.submit "sign up", :class => 'btn btn-login' %>
-          </div>
-        <% end %>
-      </div>
+<div class="login container">
+  <div class="social-login">
+    <p>Sign up with</p>
+    <div class="social-login-buttons">
+      <i class="fa fa-facebook-square"></i>
+      <i class="fa fa-twitter-square"></i>
+      <i class="fa fa-google-plus-square"></i>
     </div>
   </div>
+  <div class="social-login-form">
+    <p>or with Top Setup</p>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <div class="form-field">
+        <%= f.text_field :email, autofocus: true, placeholder: "email address", :class => "login-input" %>
+      </div>
+      <div class="form-field">
+        <%= f.text_field :username, autofocus: true, placeholder: "username", :class => "login-input" %>
+      </div>
+      <div class="form-field">
+        <%= f.password_field :password, autocomplete: "off", placeholder: "password", :class => "login-input" %>
+        <!-- <% if @minimum_password_length %>
+          <small class="text-muted pull-right">Minimum <%= @minimum_password_length %> characters</small>
+        <% end %> -->
+      </div>
+      <div class="actions text-center">
+        <%= f.submit "sign up", :class => 'btn btn-login' %>
+      </div>
+    <% end %>
+  </div>
+  <p>
+    Already have an account? <%= link_to "Log in", new_session_path(resource_name), :class => 'link' %> here!
+  </p>
 </div>
