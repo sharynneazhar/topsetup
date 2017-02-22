@@ -2,22 +2,9 @@
 
 Browse top setups from around the world or show off your own setup!
 
-Things you may want to cover:
+#### Troubleshooting
 
-* Ruby version
+> PG::ConnectionBad - could not connect to server: Connection refused
+  Is the server running on host "localhost" ...
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Run the following:  `brew services restart postgresql`

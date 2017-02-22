@@ -32,6 +32,9 @@ gem 'carrierwave'
 # Use MiniMagick for image processing
 gem 'mini_magick'
 
+# Multi step form
+gem 'wicked'
+
 # Figaro to securely configure application
 # gem 'figaro'
 

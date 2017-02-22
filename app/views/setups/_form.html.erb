@@ -1,8 +1,7 @@
-<%= form_for(setup, html: { multipart: true }) do |f| %>
+<%= form_for(setup) do |f| %>
   <% if setup.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(setup.errors.count, "error") %> prohibited this setup from being saved:</h2>
-
       <ul>
       <% setup.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -16,44 +15,7 @@
     <%= f.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description, :rows => 10, style: 'width:50%;' %>
-  </div>
-
-  <%= f.fields_for :setup_images do |s| %>
-    <div class="field">
-      <%= s.label :image %>
-      <%= s.file_field :image, multiple: true, name: "setup_images[image][]" %>
-      <% if s.object.image? %>
-        <%= image_tag s.object.image.thumb.url %>
-      <% end %>
-    </div>
-  <% end %>
-
-  <%= f.fields_for :parts do |s| %>
-    <% @categories.each do |cat| %>
-      <div class="form-inline">
-        <div class="field form-group">
-          <%= s.label :category_id %>
-          <%= select_tag(:category_id, options_for_select(@categories),
-            :prompt => "Select one!", name: "parts[][category]") %>
-        </div>
-        <div class="field form-group">
-          <%= s.label :name %>
-          <%= s.text_field :name, name: "parts[][name]" %>
-        </div>
-        <div class="field form-group">
-          <%= s.label :link %>
-          <%= s.text_field :link, name: "parts[][link]" %>
-        </div>
-      </div>
-    <% end %>
-  <% end %>
-
-  <br>
-
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Continue" %>
   </div>
 <% end %>

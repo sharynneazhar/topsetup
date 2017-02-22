@@ -39,23 +39,7 @@ class SetupsController < ApplicationController
     @setup = current_user.setups.new(setup_params)
     respond_to do |format|
       if @setup.save
-
-        if params[:setup_images]
-          params[:setup_images]['image'].each do |i|
-            @setup_image = @setup.setup_images.create!(:image => i, :setup_id => @setup.id)
-          end
-        end
-
-        if params[:parts]
-          params[:parts].each do |pt|
-            if pt['category'].present?
-              @categoryId = Category.find_by(name: pt['category']).id
-              @part = @setup.parts.create!(:name => pt['name'], :link => pt['link'], :setup_id => @setup.id, :category_id => @categoryId)
-            end
-          end
-        end
-
-        format.html { redirect_to @setup, notice: 'Setup was successfully created.' }
+        format.html { redirect_to setup_form_steps_path(:add_images, :setup_id => @setup.id) }
         format.json { render :show, status: :created, location: @setup }
       else
         format.html { render :new }
