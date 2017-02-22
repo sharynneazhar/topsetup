@@ -11,12 +11,17 @@
 @import "setups";
 
 html, body {
-  max-width: 962px;
   margin: 0 auto;
   background-color: $bg;
   font-family: "Lato", "Open-Sans", sans-serif;
   font-weight: $regular;
   color: $gray;
+}
+
+.wrapper {
+  max-width: 962px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 textarea,
@@ -28,10 +33,6 @@ input:not([type=button]):not([type=reset]):not([type=submit]):not([type=file]) {
 
 label {
   display: block;
-}
-
-.container {
-  width: 70%;
 }
 
 @media (max-width: 768px) {

@@ -1,12 +1,13 @@
 .login {
-  max-width: 300px;
+  max-width: 350px;
   margin-top: 30px;
   text-align: center;
   color: $gray;
 
   p {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: $light;
+    letter-spacing: .5px;
   }
 
   .login-hero {
@@ -22,17 +23,15 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 10px 30px;
 
-    i {
-      margin: 12px;
-      font-size: 36px;
+    .fa-square {
       color: $bg;
     }
   }
 
   .social-login-form {
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 20px;
 
     form {
@@ -41,19 +40,20 @@
 
     .btn-login {
       border-radius: 4px;
-      -webkit-box-shadow: 2px 2px 4px 0px rgba(4, 14, 31, 0.5) !important;
-      -moz-box-shadow: 2px 2px 4px 0px rgba(4, 14, 31, 0.5) !important;
-      box-shadow: 2px 2px 4px 0px rgba(4, 14, 31, 0.5) !important;
+      -webkit-box-shadow: 0px 2px 4px 0px rgba(4, 14, 31, 0.5) !important;
+      -moz-box-shadow: 0px 2px 4px 0px rgba(4, 14, 31, 0.5) !important;
+      box-shadow: 0px 2px 4px 0px rgba(4, 14, 31, 0.5) !important;
     }
   }
 
   .social-login-buttons,
   .social-login-form form {
+    margin-top: 15px;
     border-radius: 4px;
     background-color: $bgAccent;
-    -webkit-box-shadow: 2px 2px 4px 0px rgba(4, 14, 31, 0.5) !important;
-    -moz-box-shadow: 2px 2px 4px 0px rgba(4, 14, 31, 0.5) !important;
-    box-shadow: 2px 2px 4px 0px rgba(4, 14, 31, 0.5) !important;
+    // -webkit-box-shadow: 1px 2px 4px 0px rgba(4, 14, 31, 0.5) !important;
+    // -moz-box-shadow: 1px 2px 4px 0px rgba(4, 14, 31, 0.5) !important;
+    // box-shadow: 1px 2px 4px 0px rgba(4, 14, 31, 0.5) !important;
   }
 
   .form-field:not(.first) {
