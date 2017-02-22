@@ -1,7 +1,9 @@
-<% if @setup.user_id == current_user.id %>
-  <%= link_to 'Edit', edit_setup_path(@setup) %> |
-  <%= link_to 'Destroy', @setup, method: :delete, data: { confirm: 'Are you sure?' } %> |
-  <%= link_to 'Back', setups_path %>
+<% if current_user %>
+  <% if @setup.user_id == current_user.id %>
+    <%= link_to 'Edit', edit_setup_path(@setup) %> |
+    <%= link_to 'Destroy', @setup, method: :delete, data: { confirm: 'Are you sure?' } %> |
+    <%= link_to 'Back', setups_path %>
+  <% end %>
 <% end %>
 
 <br><br>
