@@ -6,6 +6,8 @@
 
 # Ignore bundler config.
 /.bundle
+/vendor/bundle/
+/vendor/ruby/
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -17,7 +19,21 @@
 !/log/.keep
 !/tmp/.keep
 
-/public/uploads
+# Dev Machines
+.DS_Store
+*/.DS_Store
+
+/public/cache
+/public/stylesheets/compiled
+/public/system/*
+/public/assets/*
+/public/uploads/*
+/public/sitemaps
+
+# Configuration files
+config/app_config.yml
+config/database.yml
+config/application.yml
 
 # Ignore Byebug command history file.
 .byebug_history

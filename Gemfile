@@ -32,6 +32,9 @@ gem 'carrierwave'
 # Use MiniMagick for image processing
 gem 'mini_magick'
 
+# Use Fog to facilitate upload to S3
+gem 'fog'
+
 # Multi step form
 gem 'wicked'
 
