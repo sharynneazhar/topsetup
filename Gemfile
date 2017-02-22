@@ -20,6 +20,9 @@ gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 
+# Figaro for environment variables
+gem 'figaro'
+
 # Use devise for user authentication
 gem 'devise'
 
