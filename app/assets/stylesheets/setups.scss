@@ -19,22 +19,21 @@
 }
 
 .setup-images {
-  max-height: 450px;
-  overflow: hidden;
-
   .hero-image img {
+    max-height: 450px;
     width: 100%;
   }
 
   .thumbnails {
     display: flex;
-    flex-direction: column;
-    max-height: 400px;
-    overflow-y: scroll;
-    margin-left: -15px;
+    overflow-x: scroll;
+    margin-top: 15px;
+    margin-bottom: 35px;
 
-    a:not(:last-child) {
-      margin-bottom: 10px;
+    a {
+      @extend .col-xs-2;
+      padding: 0;
+      padding-right: 10px;
     }
   }
 

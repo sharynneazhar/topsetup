@@ -42,5 +42,10 @@ class FormStepsController < ApplicationController
     redirect_to wizard_path(steps.first, :setup_id => @setup.id)
   end
 
+  private
+    # Override default wizard behavior; redirect to the setup page
+    def redirect_to_finish_wizard(options = nil)
+      redirect_to @setup, notice: "You are ready to show your setup off to the world!"
+    end
 
 end

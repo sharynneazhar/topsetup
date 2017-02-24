@@ -32,6 +32,9 @@ gem 'rails-erd'
 # Carrierwave for image uploading
 gem 'carrierwave'
 
+# Drag and drop functionality
+gem 'dropzonejs-rails'
+
 # Use MiniMagick for image processing
 gem 'mini_magick'
 
