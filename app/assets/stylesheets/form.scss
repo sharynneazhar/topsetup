@@ -63,8 +63,8 @@ select {
   background-color: transparent;
   color: $gray;
 
-  .dz-preview .dz-image-preview {
-    background-color: transparent;
+  .dz-preview.dz-image-preview {
+    background-color: transparent !important;
   }
 
   a {
