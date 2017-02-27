@@ -19,10 +19,8 @@ class FormStepsController < ApplicationController
     @setup = Setup.find(params[:setup_id])
     case step
     when :add_images
-      if params[:setup_images]
-        params[:setup_images]['image'].each do |i|
-          @setup_image = @setup.setup_images.create!(:image => i, :setup_id => @setup.id)
-        end
+      if params[:file]
+        @setup_image = @setup.setup_images.create!(:image => params[:file], :setup_id => @setup.id)
       end
     when :add_parts
       if params[:parts]

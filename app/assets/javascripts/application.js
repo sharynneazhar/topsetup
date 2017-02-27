@@ -1,6 +1,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require dropzone
 
 $(document).ready(function(){
   $('.btn-favorite').hover(function() {
@@ -14,4 +15,9 @@ $(document).ready(function(){
       $('.btn-favorite i').removeClass('fa-heart-o').addClass('fa-heart') :
       $('.btn-favorite i').removeClass('fa-heart').addClass('fa-heart-o');
   });
+
+  // var dropzone = new Dropzone(".dropzone");
+  // return dropzone.on("success", function(file, response) {
+  //   var imageUrl = response.file_name.url;
+  // });
 });

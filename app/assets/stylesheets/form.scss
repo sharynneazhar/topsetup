@@ -56,6 +56,22 @@ select {
   border: 0;
 }
 
+.dropzone {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border: 2px dashed $jelly-bean;
+  background-color: transparent;
+  color: $gray;
+
+  .dz-preview .dz-image-preview {
+    background-color: transparent;
+  }
+
+  a {
+    color: $bluePop;
+  }
+}
+
 @media (min-width: 768px) {
   .setup-form {
     max-width: 450px;

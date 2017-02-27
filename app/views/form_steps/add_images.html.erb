@@ -1,25 +1,14 @@
 <div class="setup-form container">
 
-  <%= form_for(@setup, url: wizard_path) do |f| %>
+  <h2 class="setup-form-label">Add images of your setup</h2>
 
-    <% if @setup.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@setup.errors.count, "error") %> prohibited this setup from being saved:</h2>
-        <ul>
-        <% @setup.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
+  <%= form_for(@setup, url: wizard_path, :html => { :class => "dropzone" }) do |f| %>
 
     <%= f.fields_for :setup_images do |s| %>
       <div class="field">
-        <%= s.label :image, "Add images of your setup", :class => "setup-form-label" %>
-        <%= s.file_field :image, multiple: true, name: "setup_images[image][]" %>
-        <% if s.object.image? %>
-          <%= image_tag s.object.image.thumb.url %>
-        <% end %>
+        <div class="fallback">
+          <%= s.file_field :image, multiple: true %>
+        </div>
       </div>
     <% end %>
 
@@ -27,8 +16,8 @@
       <%= f.submit "Next", :class => "btn setup-form-btn" %>
     </div>
 
-    <%= link_to 'Skip this step', next_wizard_path, :class => "link" %>
-
   <% end %>
+
+  <%= link_to 'Skip this step', next_wizard_path, :class => "link" %>
 
 </div>
