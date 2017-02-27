@@ -5,4 +5,6 @@ class Setup < ApplicationRecord
   accepts_nested_attributes_for :setup_images
   accepts_nested_attributes_for :parts
 
+  validates :name, presence: true
+
 end

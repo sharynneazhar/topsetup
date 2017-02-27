@@ -51,6 +51,11 @@
   }
 }
 
+select {
+  background-color: $bgAccent;
+  border: 0;
+}
+
 @media (min-width: 768px) {
   .setup-form {
     max-width: 450px;

@@ -10,6 +10,11 @@
   @extend .hidden-xs, .hidden-sm;
 }
 
+/* Hides elememts in desktop views */
+.hide-desktop {
+  @extend .hidden-md, .hidden-lg;
+}
+
 /* Placeholder styles */
 .ph-image {
   background-color: $bgAccent;

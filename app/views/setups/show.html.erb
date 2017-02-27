@@ -1,14 +1,20 @@
-<% if current_user %>
+<!-- <% if current_user %>
   <% if @setup.user_id == current_user.id %>
     <%= link_to 'Edit', edit_setup_path(@setup) %> |
     <%= link_to 'Destroy', @setup, method: :delete, data: { confirm: 'Are you sure?' } %> |
     <%= link_to 'Back', setups_path %>
   <% end %>
-<% end %>
-
-<br><br>
+<% end %> -->
 
 <div class="row">
+  <div class="col-xs-12 hide-desktop">
+    <div class="setup-information">
+      <h1><%= @setup.name %></h1>
+      by <%= link_to @setup_user.username, edit_user_registration_path %>
+    </div>
+    <hr style="margin-bottom:20px;">
+  </div>
+
   <div class="col-md-8">
     <% unless @setup_images.blank? %>
       <div class="setup-images">
@@ -32,13 +38,15 @@
     </div> -->
   </div>
   <div class="col-md-4">
-    <div class="setup-information">
-      <h1><%= @setup.name %></h1>
-      by <%= link_to @setup_user.username, edit_user_registration_path %>
+    <div class="hide-mobile">
+      <div class="setup-information">
+        <h1><%= @setup.name %></h1>
+        by <%= link_to @setup_user.username, edit_user_registration_path %>
+      </div>
+      <!-- <div class="btn-favorite">
+        <i class="fa fa-heart-o fa-lg"></i>
+      </div> -->
     </div>
-    <button class="btn btn-favorite">
-      <i class="fa fa-heart-o fa-lg"></i>
-    </button>
     <hr style="margin-bottom:8px;">
     <div class="setup-parts list-group">
       <% @parts.each do |part| %>

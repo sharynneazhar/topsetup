@@ -3,13 +3,10 @@
   <%= form_for(@setup) do |f| %>
 
     <% if @setup.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@setup.errors.count, "error") %> prohibited this setup from being saved:</h2>
-        <ul>
+      <div class="alert alert-danger">
         <% @setup.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+          <p><%= message %></p>
         <% end %>
-        </ul>
       </div>
     <% end %>
 
