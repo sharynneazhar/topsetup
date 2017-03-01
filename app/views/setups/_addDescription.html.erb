@@ -1,0 +1,11 @@
+<%= form_for(@setup) do |f| %>
+
+  <div>
+    <%= f.text_area :description, :rows => 10, autofocus: true, :class => "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Save", :class => "btn btn-blue pull-right", :id => "saveDescription" %>
+  </div>
+
+<% end %>

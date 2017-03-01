@@ -4,13 +4,13 @@ class SetupsController < ApplicationController
   # GET /setups
   # GET /setups.json
   def home
-    @setups = Setup.all
+    @setups = Setup.all.order(created_at: :desc)
   end
 
   # GET /setups
   # GET /setups.json
   def index
-    @setups = Setup.where(user_id: current_user.id)
+    @setups = Setup.where(user_id: current_user.id).order(created_at: :desc)
   end
 
   # GET /setups/1
@@ -18,7 +18,7 @@ class SetupsController < ApplicationController
   def show
     @setup_user = User.find(@setup.user_id)
     @setup_images = @setup.setup_images.all
-    @parts = @setup.parts.all
+    @parts = @setup.parts.where("name <> ''")
   end
 
   # GET /setups/new

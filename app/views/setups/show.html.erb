@@ -30,7 +30,22 @@
     <% end %>
     <hr>
     <div class="setup-description">
-      <%= @setup.description %>
+      <% if current_user %>
+        <button type="button" class="btn btn-edit">
+          <i class="fa fa-pencil"></i>
+        </button>
+      <% end %>
+      <div class="setup-description-text">
+        <% if @setup.description %>
+          <%= @setup.description %>
+        <% else %>
+          <%= @setup_user.username %> hasn't added a description.
+          <i class="fa fa-frown-o fa-lg"></i>
+        <% end %>
+      </div>
+      <div class="setup-description-form">
+        <%= render "addDescription" %>
+      </div>
     </div>
     <!-- <hr> -->
     <!-- <div class="setup-comments">
@@ -52,7 +67,7 @@
       <% @parts.each do |part| %>
         <div class="list-group-item">
           <p class="part-type"><%= Category.find(part.category_id).name if part.category_id.present? %></p>
-          <p class="part-name"><%= link_to part.name, part.link, :target => "_blank" %></p>
+          <p class="part-name"><%= link_to part.name, url_with_protocol(part.link), :target => "_blank" %></p>
         </div>
       <% end %>
     </div>

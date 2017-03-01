@@ -1,4 +1,4 @@
-<div class="setup-form container">
+<div class="parts-form container">
 
   <%= form_for(@setup, url: wizard_path) do |f| %>
 
@@ -17,18 +17,17 @@
 
     <%= f.fields_for :parts do |s| %>
       <% @categories.each do |cat| %>
-        <div class="field form-group">
-          <%= s.label :category_id, "Part Type" %>
-          <%= select_tag(:category_id, options_for_select(@categories),
-            :prompt => "Select one!", name: "parts[][category]") %>
-        </div>
-        <div class="field form-group">
-          <%= s.label :name, "Part Name" %>
-          <%= s.text_field :name, name: "parts[][name]", :class => "setup-form-input" %>
-        </div>
-        <div class="field form-group">
-          <%= s.label :link, "URL" %>
-          <%= s.text_field :link, name: "parts[][link]", :class => "setup-form-input" %>
+        <div class="form-inline row">
+          <div class="form-group col-xs-3">
+            <%= s.label :category_id, cat, :class => "parts-label" %>
+            <%= f.hidden_field :category_id, :value => cat, name: "parts[][category]" %>
+          </div>
+          <div class="form-group col-xs-4">
+            <%= s.text_field :name, name: "parts[][name]", placeholder: "part name", :class => "parts-form-input" %>
+          </div>
+          <div class="form-group col-xs-5">
+            <%= s.text_field :link, name: "parts[][link]", placeholder: "link to part", :class => "parts-form-input" %>
+          </div>
         </div>
       <% end %>
     <% end %>

@@ -36,3 +36,10 @@ input[type=submit]:hover {
   background-color: #87c3d8;
   color: #fff;
 }
+
+.btn-edit {
+  @extend .dark-shadow;
+  border-radius: 100%;
+  background-color: $bluePop;
+  color: #fff;
+}

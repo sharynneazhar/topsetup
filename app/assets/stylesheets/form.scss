@@ -51,6 +51,42 @@
   }
 }
 
+.parts-form {
+  @extend .setup-form;
+
+  .form-inline {
+    display: flex;
+    align-items: center;
+  }
+
+  .form-group {
+    @extend .field;
+    text-align: left;
+  }
+
+  .parts-label {
+    font-size: 14px;
+    font-weight: $light;
+    text-transform: uppercase;
+  }
+
+  .parts-form-input {
+    width: 100%;
+    outline: 0;
+    border: 1px solid $bluePop !important;
+    background-color: $bgAccent !important;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: $light;
+  }
+
+  .parts-form-input:focus,
+  .parts-form-input:active {
+    border: 1px solid $bluePop !important;
+    background-color: $bgAccent !important;
+  }
+}
+
 select {
   background-color: $bgAccent;
   border: 0;
@@ -72,8 +108,22 @@ select {
   }
 }
 
+.form-control {
+  width: 100%;
+  outline: 0;
+  border: 1px solid $bluePop !important;
+  background-color: $bgAccent !important;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: $light;
+}
+
 @media (min-width: 768px) {
   .setup-form {
     max-width: 450px;
+  }
+
+  .parts-form {
+    max-width: 750px;
   }
 }

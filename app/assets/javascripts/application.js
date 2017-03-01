@@ -20,4 +20,18 @@ $(document).ready(function(){
   // return dropzone.on("success", function(file, response) {
   //   var imageUrl = response.file_name.url;
   // });
+
+
+  $(".setup-description-form").hide();
+
+  $(".setup-description button").click(function() {
+    $(".setup-description-text").toggle();
+    $(".setup-description-form").toggle();
+  });
+
+  $("#saveDescription").click(function() {
+    $(".setup-description-form").hide();
+    $(".setup-description-text").show();
+  });
+
 });
