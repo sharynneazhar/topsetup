@@ -1,15 +1,9 @@
 .setup-form {
+  @extend .container, .text-center;
   max-width: 100%;
   margin-top: 30px;
   padding-top: 50px;
-  text-align: center;
-  color: #FFF;
-
-  .social-setup-form-form form {
-    margin-top: 15px;
-    border-radius: 4px;
-    background-color: $bgAccent;
-  }
+  color: $white;
 
   .setup-form-label {
     font-size: 24px;
@@ -18,31 +12,68 @@
   }
 
   .setup-form-input {
+    @extend .text-center;
     width: 100%;
     outline: 0;
-    border: 0 !important;
-    border-bottom: 1px solid $bluePop !important;
-    background-color: $bg !important;
-    color: #FFF;
+    border: 0;
+    border-bottom: 1px solid $accent;
+    background-color: $bg;
     font-size: 24px;
     font-weight: $light;
-    text-align: center;
+    color: $white;
   }
 
   .setup-form-input:focus,
   .setup-form-input:active {
-    border: 0 !important;
-    border-bottom: 1px solid $bluePop !important;
-    background-color: $bg !important;
-    text-align: center;
+    @extend .text-center;
+    border: 0;
+    border-bottom: 1px solid $accent;
+    background-color: $bg;
   }
 
   .setup-form-btn {
     @extend .dark-shadow;
-    font-size: 18px;
     margin-top: 55px;
     margin-bottom: 25px;
     padding: 8px 45px;
+    font-size: 18px;
+  }
+}
+
+.images-form {
+  @extend .container, .text-center;
+  max-width: 100%;
+  margin-top: 30px;
+  padding-top: 50px;
+  color: $white;
+
+  .dropzone {
+    margin-top: 40px;
+    border: 2px dashed $accentMuted;
+    background-color: transparent;
+    color: $white;
+
+    .dz-preview.dz-image-preview {
+      background-color: transparent !important;
+    }
+
+    a {
+      color: $accent;
+    }
+  }
+
+  .images-form-label {
+    font-size: 24px;
+    font-weight: $light;
+    margin-bottom: 25px;
+  }
+
+  .images-form-btn {
+    @extend .dark-shadow;
+    margin-top: 55px;
+    margin-bottom: 25px;
+    padding: 8px 45px;
+    font-size: 18px;
   }
 
   .link {
@@ -52,19 +83,28 @@
 }
 
 .parts-form {
-  @extend .setup-form;
+  @extend .container, .text-center;
+  max-width: 100%;
+  margin-top: 30px;
+  padding-top: 50px;
+  color: $white;
 
   .form-inline {
-    display: flex;
-    align-items: center;
+    @extend .vcenter;
   }
 
   .form-group {
-    @extend .field;
+    margin-top: 15px;
     text-align: left;
   }
 
-  .parts-label {
+  .parts-form-label {
+    font-size: 24px;
+    font-weight: $light;
+    margin-bottom: 25px;
+  }
+
+  .part-type-label {
     font-size: 14px;
     font-weight: $light;
     text-transform: uppercase;
@@ -73,47 +113,39 @@
   .parts-form-input {
     width: 100%;
     outline: 0;
-    border: 1px solid $bluePop !important;
-    background-color: $bgAccent !important;
-    color: #FFF;
+    border: 1px solid $accent;
+    background-color: $bgAccent;
+    color: $white;
     font-size: 14px;
     font-weight: $light;
   }
 
   .parts-form-input:focus,
   .parts-form-input:active {
-    border: 1px solid $bluePop !important;
-    background-color: $bgAccent !important;
-  }
-}
-
-select {
-  background-color: $bgAccent;
-  border: 0;
-}
-
-.dropzone {
-  margin-top: 40px;
-  margin-bottom: 20px;
-  border: 2px dashed $jelly-bean;
-  background-color: transparent;
-  color: $gray;
-
-  .dz-preview.dz-image-preview {
-    background-color: transparent !important;
+    border: 1px solid $accent;
+    background-color: $bgAccent;
   }
 
-  a {
-    color: $bluePop;
+  .parts-form-btn {
+    @extend .dark-shadow;
+    margin-top: 55px;
+    margin-bottom: 25px;
+    padding: 8px 45px;
+    font-size: 18px;
+  }
+
+  .link {
+    font-size: 14px;
+    font-weight: $light;
   }
 }
 
 .form-control {
   width: 100%;
   outline: 0;
-  border: 1px solid $bluePop !important;
-  background-color: $bgAccent !important;
-  color: #FFF;
+  border: 1px solid $accent;
+  background-color: $bgAccent;
+  color: $white;
   font-size: 14px;
   font-weight: $light;
 }
@@ -123,7 +155,8 @@ select {
     max-width: 450px;
   }
 
-  .parts-form {
+  .parts-form,
+  .images-form {
     max-width: 750px;
   }
 }

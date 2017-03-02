@@ -1,7 +1,5 @@
-<div class="parts-form container">
-
+<div class="parts-form">
   <%= form_for(@setup, url: wizard_path) do |f| %>
-
     <% if @setup.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@setup.errors.count, "error") %> prohibited this setup from being saved:</h2>
@@ -13,31 +11,28 @@
       </div>
     <% end %>
 
-    <p class="setup-form-label">Add parts of your setup</p>
-
+    <p class="parts-form-label">Add parts of your setup</p>
     <%= f.fields_for :parts do |s| %>
       <% @categories.each do |cat| %>
         <div class="form-inline row">
           <div class="form-group col-xs-3">
-            <%= s.label :category_id, cat, :class => "parts-label" %>
+            <%= s.label :category_id, cat, :class => "part-type-label" %>
             <%= f.hidden_field :category_id, :value => cat, name: "parts[][category]" %>
           </div>
           <div class="form-group col-xs-4">
-            <%= s.text_field :name, name: "parts[][name]", placeholder: "part name", :class => "parts-form-input" %>
+            <%= s.text_field :name, name: "parts[][name]",
+              placeholder: "part name", :class => "parts-form-input" %>
           </div>
           <div class="form-group col-xs-5">
-            <%= s.text_field :link, name: "parts[][link]", placeholder: "link to part", :class => "parts-form-input" %>
+            <%= s.text_field :link, name: "parts[][link]",
+              placeholder: "link to part", :class => "parts-form-input" %>
           </div>
         </div>
       <% end %>
     <% end %>
-
     <div class="actions">
-      <%= f.submit "Show off my setup!", :class => "btn setup-form-btn" %>
+      <%= f.submit "Show off my setup!", :class => "btn parts-form-btn" %>
     </div>
-
     <%= link_to 'Skip this step', next_wizard_path, :class => "link" %>
-
   <% end %>
-
 </div>

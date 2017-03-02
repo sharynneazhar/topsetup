@@ -7,8 +7,8 @@
 @import "variables";
 @import "helpers";
 @import "buttons";
-@import "form";
 @import "navbar";
+@import "form";
 @import "login";
 @import "setups";
 
@@ -18,7 +18,7 @@ html, body {
   background-color: $bg;
   font-family: "Lato", "Open-Sans", sans-serif;
   font-weight: $regular;
-  color: $gray;
+  color: $white;
 }
 
 .wrapper {
@@ -28,29 +28,21 @@ html, body {
 }
 
 textarea,
-input:not([type=button]):not([type=reset]):not([type=submit]):not([type=file]) {
+input:not([type=button]),
+input:not([type=reset]),
+input:not([type=submit]),
+input:not([type=file]) {
   padding: 8px;
   border: none;
-  background-color: $blueShaded;
 }
 
 label {
   display: block;
 }
 
-@media (max-width: 768px) {
-  .container {
-    width: 98%;
-  }
-}
-
 .link,
 .link:hover {
-  color: $bluePop;
-}
-
-.field {
-  margin-top: 25px;
+  color: $accent;
 }
 
 /* home page styles */
@@ -65,15 +57,6 @@ label {
   img {
     @extend .dark-shadow;
   }
-}
-
-/* flash message styles */
-#notice {
-  color: green;
-}
-
-.field_with_errors {
-  padding: 2px;
 }
 
 /* flatten bootstrap css */
@@ -123,4 +106,10 @@ textarea {
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   border-radius: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 98%;
+  }
 }

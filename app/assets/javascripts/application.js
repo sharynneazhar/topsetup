@@ -29,9 +29,9 @@ $(document).ready(function(){
     $(".setup-description-form").toggle();
   });
 
-  $("#saveDescription").click(function() {
+  $("#saveDescription, #cancelDescription").click(function() {
     $(".setup-description-form").hide();
     $(".setup-description-text").show();
   });
-
+  
 });

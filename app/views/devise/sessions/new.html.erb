@@ -1,4 +1,4 @@
-<div class="login container">
+<div class="login">
   <div class="social-login">
     <p>Log in with</p>
     <div class="social-login-buttons">
@@ -19,13 +19,13 @@
   <div class="social-login-form">
     <p>or with Top Setup</p>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="form-field">
+      <div class="field">
         <%= f.text_field :login, autofocus: true, placeholder: "username", :class => "login-input" %>
       </div>
-      <div class="form-field">
+      <div class="field">
         <%= f.password_field :password, autocomplete: "off", placeholder: "password", :class => "login-input" %>
       </div>
-      <div class="actions text-center">
+      <div class="actions">
         <%= f.submit "login", :class => 'btn btn-login' %>
       </div>
     <% end %>

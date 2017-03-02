@@ -1,7 +1,3 @@
-// Place all the styles related to the setups controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .setup-information {
   font-size: 16px;
   font-weight: $black;
@@ -12,8 +8,8 @@
     text-transform: capitalize;
   }
 
-  a {
-    color: $bluePop;
+  a:not(.btn) {
+    color: $accent;
     font-weight: $bold;
   }
 }
@@ -40,33 +36,13 @@
 }
 
 .setup-description {
+  font-size: 13px;
+  font-weight: $light;
+  letter-spacing: 1px;
 
   .fa-frown-o {
     margin-left: 8px;
   }
-
-  button {
-    display: block;
-    margin-top: -30px;
-    margin-left: -50px;
-  }
-}
-
-.btn-favorite {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  padding-left: 0;
-  background-color: transparent;
-
-  i {
-    margin-right: 8px;
-    color: #FA588F;
-  }
-}
-
-.btn-favorite:hover {
-  color: $bluePop;
 }
 
 .setup-description {
@@ -93,7 +69,7 @@
   }
   .carousel-indicators.carousel-indicators .active {
     background-color: transparent;
-    border-color: $gray;
+    border-color: $white;
   }
 }
 
@@ -114,11 +90,11 @@
   .part-type {
     text-transform: uppercase;
     font-weight: $light;
-    color: $gray;
+    color: $white;
   }
 
   .part-name a {
-    color: $bluePop;
+    color: $accent;
     letter-spacing: 1px;
   }
 }

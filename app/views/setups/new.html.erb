@@ -1,23 +1,18 @@
-<div class="setup-form container">
-
+<div class="setup-form">
+  <% if @setup.errors.any? %>
+    <div class="alert alert-danger">
+      <% @setup.errors.full_messages.each do |message| %>
+        <p><%= message %></p>
+      <% end %>
+    </div>
+  <% end %>
   <%= form_for(@setup) do |f| %>
-
-    <% if @setup.errors.any? %>
-      <div class="alert alert-danger">
-        <% @setup.errors.full_messages.each do |message| %>
-          <p><%= message %></p>
-        <% end %>
-      </div>
-    <% end %>
-
     <div class="field">
       <%= f.label :name, "Name your setup", :class => "setup-form-label" %>
       <%= f.text_field :name, autofocus: true, :class => "setup-form-input" %>
     </div>
-
     <div class="actions">
       <%= f.submit "Next", :class => "btn setup-form-btn" %>
     </div>
   <% end %>
-
 </div>

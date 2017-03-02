@@ -1,11 +1,10 @@
 .navbar {
+  @extend .dark-shadow;
   width: 100%;
   margin-bottom: 40px;
-  background-color: #303D48;
+  background-color: $bgAccent;
   border: none;
-  color: $gray;
-
-  @extend .dark-shadow;
+  color: $white;
 
   .navbar-container {
     max-width: 962px;
@@ -15,53 +14,53 @@
 
   .navbar-brand {
     padding-left: 0;
-    color: $gray;
     font-size: 26px;
     font-weight: $black;
+    color: $white;
 
     span, {
-      color: $bluePop;
+      color: $accent;
     }
   }
 
   .navbar-header {
     @extend .vcenter;
+
+    .navbar-toggle {
+      border: none;
+      padding: 0;
+      margin: 0;
+      margin-left: auto;
+    }
+
+    .navbar-toggle:focus {
+      background-color: transparent;
+    }
+
+    .navbar-brand:hover {
+      color: $white;
+    }
   }
 
-  .navbar-toggle {
-    border: none;
-    margin: 0;
-    margin-left: auto;
-    padding: 0;
-  }
-
-  .navbar-toggle:focus {
-    background-color: transparent;
-  }
-
-  .navbar-brand:hover {
-    color: $gray;
-  }
-
-  .navbar-text,
-  .navbar-collapse {
+  .navbar-collapse,
+  .navbar-text {
     margin-right: 0;
     padding-right: 0;
   }
 
   .navbar-text a {
     margin-left: 30px;
-    color: $gray;
+    color: $white;
     font-size: 16px;
     text-transform: uppercase;
   }
 
   .navbar-link {
-    color: $gray;
+    color: $white;
   }
 
   .navbar-link:hover {
-    color: $bluePop;
+    color: $accent;
     text-decoration: none;
   }
 }

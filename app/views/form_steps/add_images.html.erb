@@ -1,9 +1,7 @@
-<div class="setup-form container">
-
-  <h2 class="setup-form-label">Add images of your setup</h2>
-
-  <%= form_for(@setup, url: wizard_path, :html => { :class => "dropzone" }) do |f| %>
-
+<div class="images-form">
+  <h2 class="images-form-label">Add images of your setup</h2>
+  <%= form_for(@setup, url: wizard_path,
+    :html => { :class => "dropzone", :id => "setupForm" }) do |f| %>
     <%= f.fields_for :setup_images do |s| %>
       <div class="field">
         <div class="fallback">
@@ -11,13 +9,9 @@
         </div>
       </div>
     <% end %>
-
-    <div class="actions">
-      <%= f.submit "Next", :class => "btn setup-form-btn" %>
-    </div>
-
   <% end %>
-
+  <div class="actions">
+    <input type="submit" class="btn images-form-btn" form="setupForm" value="Next" />
+  </div>
   <%= link_to 'Skip this step', next_wizard_path, :class => "link" %>
-
 </div>
