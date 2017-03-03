@@ -24,10 +24,13 @@ class FormStepsController < ApplicationController
       end
     when :add_parts
       if params[:parts]
-        params[:parts].each do |pt|
-          if pt['category'].present?
-            @categoryId = Category.find_by(name: pt['category']).id
-            @part = @setup.parts.create!(:name => pt['name'], :link => pt['link'], :setup_id => @setup.id, :category_id => @categoryId)
+        params[:parts].each do |part|
+          if part['category'].present?
+            @categoryId = Category.find_by(name: part['category']).id
+            @part = @setup.parts.create!(:name => part['name'],
+                                         :link => part['link'],
+                                         :setup_id => @setup.id,
+                                         :category_id => @categoryId)
           end
         end
       end

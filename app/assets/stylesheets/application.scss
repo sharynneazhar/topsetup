@@ -54,6 +54,18 @@ label {
     margin-bottom: 2.5em;
   }
 
+  .edit-item {
+    @extend .col-xs-6, .col-sm-2, .col-md-2, .col-lg-2;
+    margin-bottom: 2.5em;
+
+    .btn {
+      @extend .super-dark-shadow;
+      position: absolute;
+      right: 0;
+      top: -10px;
+    }
+  }
+
   img {
     @extend .dark-shadow;
   }

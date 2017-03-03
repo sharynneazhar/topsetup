@@ -1,16 +1,55 @@
-<h1>Editing Setup</h1>
+<div class="edit-form">
+  <%= form_for(@setup) do |f| %>
 
+    <div class="field">
+      <%= f.label :name, "Name", :class => "form-label" %>
+      <%= f.text_field :name, autofocus: true, :class => "form-control setup-name" %>
+    </div>
 
-<%= form_for(@setup) do |f| %>
-  <div class="field">
-    <%= f.label :name, "Edit Name", :class => "control-label" %>
-    <%= f.text_field :name, autofocus: true, :class => "form-control" %>
-  </div>
+    <div class="field">
+      <%= f.label :description, "Description", :class => "form-label" %>
+      <%= f.text_area :description, :rows => 12, :class => "form-textarea" %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "Next", :class => "btn setup-form-btn" %>
-  </div>
-<% end %>
+    <h2 class="form-label">Images</h2><hr>
+    <div class="grid row">
+      <% @setup_images.each do |image| %>
+        <div class="edit-item">
+          <%= link_to image, method: :delete, :class => "btn btn-remove",
+            data: { confirm: 'Are you sure?' } do %>
+            <i class="fa fa-close"></i>
+          <% end %>
+          <%= image_tag(image.image.thumbBig.url, :class => "img-responsive") %>
+        </div>
+      <% end %>
+    </div>
 
-<%= link_to 'Show', @setup %> |
-<%= link_to 'Back', setups_path %>
+    <h2 class="form-label">Parts List</h2><hr>
+    <%= f.fields_for :parts do |s| %>
+      <% @categories.each do |category| %>
+        <div class="form-inline row">
+          <div class="form-group col-xs-3">
+            <%= s.label :category_id, category, :class => "part-name" %>
+            <%= s.hidden_field :category_id, :value => category, name: "parts[][category]" %>
+          </div>
+          <div class="form-group col-xs-4">
+            <%= s.text_field :name, name: "parts[][name]",
+              placeholder: "part name", :class => "form-control" %>
+          </div>
+          <div class="form-group col-xs-5">
+            <%= s.text_field :link, name: "parts[][link]",
+              placeholder: "link to part", :class => "form-control" %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
+    <div class="actions">
+      <div class="button-group">
+        <%= f.submit "Save", :class => "btn btn-accent padRight" %>
+        <%= link_to "Cancel", :back, :class => "link" %>
+      </div>
+    </div>
+
+  <% end %>
+</div>

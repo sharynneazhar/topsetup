@@ -56,7 +56,7 @@ class SetupImagesController < ApplicationController
   def destroy
     @setup_image.destroy
     respond_to do |format|
-      format.html { redirect_to setup_images_url, notice: 'Setup image was successfully destroyed.' }
+      format.html { redirect_to :back }
       format.json { head :no_content }
     end
   end

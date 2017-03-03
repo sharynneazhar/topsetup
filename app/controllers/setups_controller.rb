@@ -31,6 +31,8 @@ class SetupsController < ApplicationController
 
   # GET /setups/1/edit
   def edit
+    @setup_images = @setup.setup_images.all
+    @categories = Category.all.map{|c| c.name }
   end
 
   # POST /setups

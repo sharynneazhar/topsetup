@@ -10,7 +10,13 @@
   </div>
 
   <div class="col-md-8">
-    <% unless @setup_images.blank? %>
+    <% if @setup_images.blank? %>
+      <div class="setup-images">
+        <div class="hero-image">
+          <%= link_to image_tag("no-image", :class => "img-responsive")%>
+        </div>
+      </div>
+    <% else %>
       <div class="setup-images">
         <div class="hero-image">
           <%= link_to image_tag(@setup_images.first.image.hero.url,
@@ -27,7 +33,7 @@
     <hr>
     <div class="setup-description">
       <div class="setup-description-text">
-        <% if @setup.description %>
+        <% if !@setup.description.blank? %>
           <%= simple_format(@setup.description) %>
         <% else %>
           <% if (current_user && current_user.id == @setup.user_id) %>

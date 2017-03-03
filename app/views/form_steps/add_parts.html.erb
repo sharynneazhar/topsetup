@@ -12,19 +12,20 @@
     <% end %>
 
     <p class="parts-form-label">Add parts of your setup</p>
-    <%= f.fields_for :parts do |s| %>
-      <% @categories.each do |cat| %>
+    <%= f.fields_for :parts do |pt| %>
+      <% @categories.each do |category| %>
         <div class="form-inline row">
           <div class="form-group col-xs-3">
-            <%= s.label :category_id, cat, :class => "part-type-label" %>
-            <%= f.hidden_field :category_id, :value => cat, name: "parts[][category]" %>
+            <%= pt.label :category_id, category, :class => "part-type-label" %>
+            <%= pt.hidden_field :category_id, :value => category,
+              name: "parts[][category]" %>
           </div>
           <div class="form-group col-xs-4">
-            <%= s.text_field :name, name: "parts[][name]",
+            <%= pt.text_field :name, name: "parts[][name]",
               placeholder: "part name", :class => "parts-form-input" %>
           </div>
           <div class="form-group col-xs-5">
-            <%= s.text_field :link, name: "parts[][link]",
+            <%= pt.text_field :link, name: "parts[][link]",
               placeholder: "link to part", :class => "parts-form-input" %>
           </div>
         </div>

@@ -8,3 +8,7 @@ Browse top setups from around the world or show off your own setup!
   Is the server running on host "localhost" ...
 
 Run the following:  `brew services restart postgresql`
+
+> New styles are not updated when deployed
+
+Run the following: `rake assets:precompile`

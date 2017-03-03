@@ -16,6 +16,7 @@
     width: 100%;
     outline: 0;
     border: 0;
+    border-radius: 0;
     border-bottom: 1px solid $accent;
     background-color: $bg;
     font-size: 24px;
@@ -148,6 +149,68 @@
   color: $white;
   font-size: 14px;
   font-weight: $light;
+}
+
+.edit-form {
+  .field {
+    margin-bottom: 50px;
+  }
+
+  .setup-name {
+    width: 100%;
+    outline: 0;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid $accent;
+    background-color: $bg;
+    font-size: 32px;
+    font-weight: $light;
+    color: $gray;
+    margin-top: 25px;
+  }
+
+  .setup-name:focus,
+  .setup-name:active {
+    border: 0;
+    border-bottom: 1px solid $accent;
+    background-color: $bg;
+  }
+
+  .part-name {
+    font-size: 14px;
+    font-weight: $light;
+    text-transform: uppercase;
+  }
+
+  .form-label {
+    @extend h2;
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+
+  .form-control {
+    @extend .form-control;
+    width: 300px;
+  }
+
+  .form-textarea {
+    width: 100%;
+    outline: 0;
+    border: 1px solid $accent;
+    background-color: $bgAccent;
+    color: $white;
+    font-size: 14px;
+    font-weight: $light;
+  }
+
+  hr {
+    margin-bottom: 40px;
+  }
+
+  .form-inline {
+    margin-bottom: 15px;
+  }
+
 }
 
 @media (min-width: 768px) {
