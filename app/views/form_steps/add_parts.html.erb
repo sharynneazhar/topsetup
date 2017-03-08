@@ -16,8 +16,8 @@
       <% @categories.each do |category| %>
         <div class="form-inline row">
           <div class="form-group col-xs-3">
-            <%= pt.label :category_id, category, :class => "part-type-label" %>
-            <%= pt.hidden_field :category_id, :value => category,
+            <%= pt.label :category_id, category.name, :class => "part-type-label" %>
+            <%= pt.hidden_field :category_id, :value => category.id,
               name: "parts[][category]" %>
           </div>
           <div class="form-group col-xs-4">

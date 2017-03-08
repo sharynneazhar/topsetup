@@ -24,15 +24,13 @@ class SetupsController < ApplicationController
   # GET /setups/new
   def new
     @setup = Setup.new
-    @setup_image = @setup.setup_images.build
-    @part = @setup.parts.build
-    @categories = Category.all.map{|c| c.name }
   end
 
   # GET /setups/1/edit
   def edit
     @setup_images = @setup.setup_images.all
-    @categories = Category.all.map{|c| c.name }
+    @parts = @setup.parts.all
+    @categories = Category.all
   end
 
   # POST /setups

@@ -1,6 +1,5 @@
 class FormStepsController < ApplicationController
   include Wicked::Wizard
-
   steps :add_images, :add_parts
 
   def show
@@ -10,7 +9,7 @@ class FormStepsController < ApplicationController
       @setup_image = @setup.setup_images.build
     when :add_parts
       @part = @setup.parts.build
-      @categories = Category.all.map{|c| c.name }
+      @categories = Category.all
     end
     render_wizard
   end
@@ -20,19 +19,14 @@ class FormStepsController < ApplicationController
     case step
     when :add_images
       if params[:file]
-        @setup_image = @setup.setup_images.create!(:image => params[:file], :setup_id => @setup.id)
+        @setup_image = @setup.setup_images.create!(:image => params[:file],
+          :setup_id => @setup.id)
       end
     when :add_parts
-      if params[:parts]
-        params[:parts].each do |part|
-          if part['category'].present?
-            @categoryId = Category.find_by(name: part['category']).id
-            @part = @setup.parts.create!(:name => part['name'],
-                                         :link => part['link'],
-                                         :setup_id => @setup.id,
-                                         :category_id => @categoryId)
-          end
-        end
+      params[:parts].each do |part|
+        @part = @setup.parts.create!(:name => part['name'],
+          :link => part['link'], :setup_id => @setup.id,
+          :category_id => part['category'])
       end
     end
     render_wizard @setup
