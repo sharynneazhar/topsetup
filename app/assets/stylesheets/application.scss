@@ -36,6 +36,11 @@ input:not([type=file]) {
   border: none;
 }
 
+.form-control[readonly] {
+  background-color: $bgAccent;
+  color: $slate;
+}
+
 label {
   display: block;
 }

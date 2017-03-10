@@ -24,24 +24,22 @@
       <% end %>
     </div>
 
-    <h2 class="form-label">Parts List</h2><hr>
-    <%= f.fields_for :parts, @setup.parts.build do |s| %>
-      <% @categories.each do |category| %>
-        <div class="form-inline row">
-          <div class="form-group col-xs-3">
-            <%= s.label :category_id, category.name, :class => "part-name" %>
-            <%= s.hidden_field :category_id, :value => category.id, name: "parts[][category]" %>
-          </div>
-          <div class="form-group col-xs-4">
-            <%= s.text_field :name, name: "parts[][name]",
-              placeholder: "part name", :class => "form-control" %>
-          </div>
-          <div class="form-group col-xs-5">
-            <%= s.text_field :link, name: "parts[][link]",
-              placeholder: "link to part", :class => "form-control" %>
-          </div>
+    <h2 class="form-label">Parts List</h2><hr style="margin-bottom:10px;">
+    <% @parts.each do |part| %>
+      <div class="edit-parts row">
+        <div class="form-group col-xs-4">
+          <p class="part-name"><%= Category.find(part.category_id).name %></p>
         </div>
-      <% end %>
+        <div class="form-group col-xs-4">
+          <p class="part-name"><%= part.name %></p>
+        </div>
+        <div class="form-group col-xs-3">
+          <%= link_to part.link %>
+        </div>
+        <div class="form-group col-xs-1">
+          <%= link_to 'Edit', edit_part_path(part) %>
+        </div>
+      </div>
     <% end %>
 
     <div class="actions">

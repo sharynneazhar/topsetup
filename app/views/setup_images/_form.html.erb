@@ -1,4 +1,4 @@
-<%= image_tag @setup_image.image %>
+<%= image_tag @setup_image.image.hero.url %>
 <%= form_for(setup_image) do |f| %>
   <% if setup_image.errors.any? %>
     <div id="error_explanation">

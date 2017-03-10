@@ -15,7 +15,7 @@ class PartsController < ApplicationController
   # GET /parts/new
   def new
     @part = Part.new
-    @categories = Category.all.map{|c| [ c.name, c.id ] }
+    @categories = Category.all.map{ |c| c.name }
   end
 
   # GET /parts/1/edit
@@ -42,10 +42,10 @@ class PartsController < ApplicationController
   # PATCH/PUT /parts/1
   # PATCH/PUT /parts/1.json
   def update
-    @part.category_id = params[:category_id]
+    @part.category_id = params["part"][:category_id]
     respond_to do |format|
       if @part.update(part_params)
-        format.html { redirect_to @part, notice: 'Part was successfully updated.' }
+        format.html { redirect_to setup_path(@part.setup_id), notice: 'Setup was successfully updated.' }
         format.json { render :show, status: :ok, location: @part }
       else
         format.html { render :edit }
@@ -72,6 +72,6 @@ class PartsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def part_params
-      params.require(:part).permit(:setup_id, :name, :link)
+      params.require(:part).permit(:setup_id, :name, :link, :category_id)
     end
 end

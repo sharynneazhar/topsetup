@@ -180,6 +180,12 @@
     font-size: 14px;
     font-weight: $light;
     text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  .form-group {
+    margin: 10px 0;
+    text-align: left;
   }
 
   .form-label {
@@ -211,6 +217,10 @@
     margin-bottom: 15px;
   }
 
+  .edit-parts {
+    margin: 0;
+    border-bottom: 0.5px solid $bgAccent;
+  }
 }
 
 @media (min-width: 768px) {

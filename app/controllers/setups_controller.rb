@@ -18,7 +18,7 @@ class SetupsController < ApplicationController
   def show
     @setup_user = User.find(@setup.user_id)
     @setup_images = @setup.setup_images.all
-    @parts = @setup.parts.where("name <> ''")
+    @parts = @setup.parts.where("name <> ''").order("created_at ASC")
   end
 
   # GET /setups/new
@@ -29,7 +29,7 @@ class SetupsController < ApplicationController
   # GET /setups/1/edit
   def edit
     @setup_images = @setup.setup_images.all
-    @parts = @setup.parts.all
+    @parts = @setup.parts.all.order("created_at ASC")
     @categories = Category.all
   end
 

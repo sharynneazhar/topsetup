@@ -11,16 +11,20 @@
     </div>
   <% end %>
 
-  <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select one!") %>
-
   <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.label Category.find(part.category_id).name, :class => "part-name" %>
+    <%= f.hidden_field :category_id, :value => part.category_id %>
   </div>
 
   <div class="field">
-    <%= f.label :link %>
-    <%= f.text_field :link %>
+    <%= f.label :name, :class => "part-name" %>
+    <%= f.hidden_field :category_id, :value => part.category_id %>
+    <%= f.text_field :name, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :link, :class => "part-name" %>
+    <%= f.text_field :link, :class => "form-control" %>
   </div>
 
   <div class="actions">
