@@ -4,6 +4,10 @@
 //= require dropzone
 
 $(document).ready(function(){
+  setTimeout(function(){
+    $('.alert').remove();
+  }, 3500);
+
   $('.btn-favorite').hover(function() {
     $('.btn-favorite i').hasClass('fa-heart-o') ?
       $('.btn-favorite i').removeClass('fa-heart-o').addClass('fa-heart') :
@@ -33,5 +37,5 @@ $(document).ready(function(){
     $(".setup-description-form").hide();
     $(".setup-description-text").show();
   });
-  
+
 });

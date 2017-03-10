@@ -1,5 +1,4 @@
 <div class="row">
-
   <!-- only visible on phones and tablets -->
   <div class="col-xs-12 hide-desktop">
     <div class="setup-information">
@@ -85,5 +84,11 @@
     </div>
   </div>
 </div>
+
+<% if (current_user && current_user.id == @setup.user_id) %>
+  <%= link_to edit_setup_path(@setup), :class => "btn btn-edit-mobile hide-desktop" do %>
+    <i class="fa fa-pencil fa-2x"></i>
+  <% end %>
+<% end %>
 
 <%= render "setups/partials/imageModal" %>

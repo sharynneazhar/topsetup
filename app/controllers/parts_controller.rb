@@ -20,6 +20,7 @@ class PartsController < ApplicationController
 
   # GET /parts/1/edit
   def edit
+    @setup = Setup.find(@part.setup_id)
   end
 
   # POST /parts

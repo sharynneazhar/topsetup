@@ -96,13 +96,27 @@ input[type=submit]:hover {
   bottom: 30px;
   right: 30px;
   padding: 15px 20px;
-  background-color: $cameo;
-  border-color: $cameo;
+  background-color: $red;
+  border-color: $red;
 }
 
 .btn-add:hover {
-  border: 1px solid lighten($cameo, 5%);
-  background-color: lighten($cameo, 5%);
+  border: 1px solid lighten($red, 5%);
+  background-color: lighten($red, 5%);
+  color: $white;
+}
+
+.btn-edit-mobile {
+  @extend .btn-accent, .btn-round;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 15px 20px;
+}
+
+.btn-edit-mobile:hover {
+  border: 1px solid lighten($accent, 5%);
+  background-color: lighten($accent, 5%);
   color: $white;
 }
 

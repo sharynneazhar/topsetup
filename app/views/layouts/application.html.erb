@@ -35,8 +35,10 @@
       <% end %>
       <%= yield %>
       <% if (current_user) %>
-        <%= link_to new_setup_path, :class => "btn btn-add hide-desktop" do %>
-          <i class="fa fa-plus fa-2x"></i>
+        <% if current_page?("/") %>
+          <%= link_to new_setup_path, :class => "btn btn-add hide-desktop" do %>
+            <i class="fa fa-plus fa-2x"></i>
+          <% end %>
         <% end %>
       <% end %>
     </div>
