@@ -1,9 +1,10 @@
-<%= image_tag @setup_image.image.hero.url %>
+<% if setup_image.image.present? %>
+  <%= image_tag setup_image.image.hero.url %>
+<% end %>
 <%= form_for(setup_image) do |f| %>
   <% if setup_image.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(setup_image.errors.count, "error") %> prohibited this setup_image from being saved:</h2>
-
       <ul>
       <% setup_image.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -13,7 +14,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :image %>
+    <%= f.label :image, :class => "part-name" %>
+    <%= f.hidden_field :setup_id, :value => setup.id %>
     <%= f.file_field :image %>
   </div>
 

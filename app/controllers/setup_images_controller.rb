@@ -15,6 +15,7 @@ class SetupImagesController < ApplicationController
   # GET /setup_images/new
   def new
     @setup_image = SetupImage.new
+    @setup = Setup.find(params[:setup_id])
   end
 
   # GET /setup_images/1/edit
@@ -25,10 +26,10 @@ class SetupImagesController < ApplicationController
   # POST /setup_images.json
   def create
     @setup_image = SetupImage.new(setup_image_params)
-
     respond_to do |format|
       if @setup_image.save
-        format.html { redirect_to @setup_image, notice: 'Setup image was successfully created.' }
+        format.html { redirect_to setup_path(@setup_image.setup_id),
+          notice: 'Setup was successfully updated.' }
         format.json { render :show, status: :created, location: @setup_image }
       else
         format.html { render :new }

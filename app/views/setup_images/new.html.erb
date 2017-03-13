@@ -1,5 +1,5 @@
-<h1>New Setup Image</h1>
+<h1>Add Image</h1>
 
-<%= render 'form', setup_image: @setup_image %>
+<%= render 'form', setup: @setup, setup_image: @setup_image %>
 
-<%= link_to 'Back', setup_images_path %>
+<%= link_to 'Cancel', edit_setup_path(@setup) %>

@@ -23,6 +23,10 @@
         </div>
       <% end %>
     </div>
+    <div class="field">
+      <%= link_to 'Add More Images',
+        new_setup_image_path(:setup_id => @setup.id), :class => "link" %>
+    </div>
 
     <h2 class="form-label">Parts List</h2><hr style="margin-bottom:10px;">
     <% @parts.each do |part| %>
