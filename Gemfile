@@ -26,6 +26,12 @@ gem 'figaro'
 # Use devise for user authentication
 gem 'devise'
 
+# Use HAML templating engine
+gem 'haml'
+
+# Use haml-rails to take care of generators
+gem 'haml-rails'
+
 # Use rails-erd to easily generate a ERD diagrams
 gem 'rails-erd'
 

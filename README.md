@@ -2,6 +2,15 @@
 
 Browse top setups from around the world or show off your own setup!
 
+#### Setup
+
+Run the following commands if necessary:
+
+`rake db:migrate` to prepare database
+
+`rake db:seed` to seed required data
+
+
 #### Troubleshooting
 
 > PG::ConnectionBad - could not connect to server: Connection refused
