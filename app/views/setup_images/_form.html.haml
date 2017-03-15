@@ -1,0 +1,17 @@
+- if setup_image.image.present?
+  = image_tag setup_image.image.hero.url
+= form_for(setup_image) do |f|
+  - if setup_image.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(setup_image.errors.count, "error")
+        prohibited this setup_image from being saved:
+      %ul
+        - setup_image.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = f.label :image, :class => "part-name"
+    = f.hidden_field :setup_id, :value => setup.id
+    = f.file_field :image
+  .actions
+    = f.submit

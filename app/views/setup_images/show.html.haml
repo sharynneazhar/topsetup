@@ -1,0 +1,10 @@
+%p#notice= notice
+%p
+  %strong Setup:
+  = @setup_image.setup_id
+%p
+  %strong Image:
+  = @setup_image.image
+= link_to 'Edit', edit_setup_image_path(@setup_image)
+|
+= link_to 'Back', setup_images_path

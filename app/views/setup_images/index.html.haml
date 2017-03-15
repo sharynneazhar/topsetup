@@ -1,0 +1,18 @@
+%p#notice= notice
+%h1 Setup Images
+%table
+  %thead
+    %tr
+      %th Setup
+      %th Image
+      %th{:colspan => "3"}
+  %tbody
+    - @setup_images.each do |setup_image|
+      %tr
+        %td= setup_image.setup_id
+        %td= setup_image.image
+        %td= link_to 'Show', setup_image
+        %td= link_to 'Edit', edit_setup_image_path(setup_image)
+        %td= link_to 'Destroy', setup_image, method: :delete, data: { confirm: 'Are you sure?' }
+%br
+= link_to 'New Setup Image', new_setup_image_path
