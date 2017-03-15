@@ -1,0 +1,6 @@
+= form_for(@setup) do |f|
+  = f.text_area :description, :rows => 10, autofocus: true, :class => "form-control"
+  .actions
+    .button-group.pull-right
+      = f.button "Cancel", :type => "button", :class => "btn btn-accent-o padRight", :id => "cancelDescription"
+      = f.button "Save", :type => "submit", :class => "btn btn-accent", :id => "saveDescription"

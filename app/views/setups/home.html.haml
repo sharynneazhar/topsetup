@@ -1,0 +1,8 @@
+.vcenter
+  %h4{:style => "margin-right:15px;"} Recent Submissions
+  %i.fa.fa-caret-down.fa-lg
+.grid.row
+  - @setups.each do |setup|
+    - unless setup.setup_images.blank?
+      .grid-item
+        = link_to image_tag(setup.setup_images.first.image.hero.url, :class => "img-responsive"), setup

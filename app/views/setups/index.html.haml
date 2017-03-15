@@ -1,0 +1,11 @@
+.vcenter
+  %h4{:style => "margin-right:15px;"} My Setups
+  %i.fa.fa-caret-down.fa-lg
+.grid.row
+  - @setups.each do |setup|
+    - if !setup.setup_images.blank?
+      .grid-item
+        = link_to image_tag(setup.setup_images.first.image.hero.url, :class => "img-responsive"), setup
+    - else
+      .grid-item
+        = link_to image_tag("no-image", :class => "img-responsive"), setup

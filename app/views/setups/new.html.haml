@@ -1,0 +1,11 @@
+.setup-form
+  - if @setup.errors.any?
+    .alert.alert-danger
+      - @setup.errors.full_messages.each do |message|
+        %p= message
+  = form_for(@setup) do |f|
+    .field
+      = f.label :name, "Name your setup", :class => "setup-form-label"
+      = f.text_field :name, autofocus: true, :class => "setup-form-input"
+    .actions
+      = f.submit "Next", :class => "btn setup-form-btn"

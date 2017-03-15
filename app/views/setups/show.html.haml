@@ -1,0 +1,57 @@
+.row
+  / only visible on phones and tablets
+  .col-xs-12.hide-desktop
+    .setup-information
+      %h1= @setup.name
+      by #{link_to @setup_user.username, edit_user_registration_path}
+    %hr{:style => "margin-bottom:20px;"}/
+  .col-md-8
+    - if @setup_images.blank?
+      .setup-images
+        .hero-image
+          = link_to image_tag("no-image", :class => "img-responsive")
+    - else
+      .setup-images
+        .hero-image
+          = link_to image_tag(@setup_images.first.image.hero.url, :class => "img-responsive"), "#imagesModal", "data-toggle": "modal"
+        .thumbnails.hide-mobile
+          - @setup_images.each do |image|
+            = link_to image_tag(image.image.thumbBig.url, :class => "img-responsive"), "#imagesModal", "data-toggle": "modal"
+    %hr
+    .setup-description
+      .setup-description-text
+        - if !@setup.description.blank?
+          = simple_format(@setup.description)
+        - else
+          - if (current_user && current_user.id == @setup.user_id)
+            %button.btn.btn-accent{:type => "button"}
+              Tell us more about your setup!
+          - else
+            = @setup_user.username
+            hasn't added a description.
+            %i.fa.fa-frown-o.fa-lg
+      .setup-description-form
+        = render "setups/partials/addDescription"
+  .col-md-4
+    .hide-mobile
+      .setup-information
+        %h1= @setup.name
+        by #{link_to @setup_user.username, edit_user_registration_path}
+      - if (current_user && current_user.id == @setup.user_id)
+        .button-group
+          = link_to edit_setup_path(@setup), :class => "btn btn-edit" do
+            %i.fa.fa-pencil
+          = link_to @setup, method: :delete, :class => "btn btn-remove", data: { confirm: 'Are you sure?' } do
+            %i.fa.fa-trash
+    %hr{:style => "margin-bottom:8px;"}
+    .setup-parts.list-group
+      - @parts.each do |part|
+        .list-group-item
+          %p.part-type
+            = Category.find(part.category_id).name if part.category_id.present?
+          %p.part-name
+            = link_to part.name, url_with_protocol(part.link), :target => "_blank"
+- if (current_user && current_user.id == @setup.user_id)
+  = link_to edit_setup_path(@setup), :class => "btn btn-edit-mobile hide-desktop" do
+    %i.fa.fa-pencil.fa-2x
+= render "setups/partials/imageModal"
