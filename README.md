@@ -6,9 +6,9 @@ Browse top setups from around the world or show off your own setup!
 
 Run the following commands if necessary:
 
-`rake db:migrate` to prepare database
+* `rake db:migrate` to prepare database
 
-`rake db:seed` to seed required data
+* `rake db:seed` to seed required data
 
 
 #### Troubleshooting
