@@ -1,0 +1,10 @@
+.images-form
+  %h2.images-form-label Add images of your setup
+  = form_for(@setup, url: wizard_path, :html => { :class => "dropzone", :id => "setupForm" }) do |f|
+    = f.fields_for :setup_images do |s|
+      .field
+        .fallback
+          = s.file_field :image, multiple: true
+  .actions
+    %input.btn.images-form-btn{:form => "setupForm", :type => "submit", :value => "Next"}
+  = link_to 'Skip this step', next_wizard_path, :class => "link"

@@ -1,0 +1,24 @@
+.parts-form
+  = form_for(@setup, url: wizard_path) do |f|
+    - if @setup.errors.any?
+      #error_explanation
+        %h2
+          = pluralize(@setup.errors.count, "error")
+          prohibited this setup from being saved:
+        %ul
+          - @setup.errors.full_messages.each do |message|
+            %li= message
+    %p.parts-form-label Add parts of your setup
+    = f.fields_for :parts do |pt|
+      - @categories.each do |category|
+        .form-inline.row
+          .form-group.col-xs-3
+            = pt.label :category_id, category.name, :class => "part-type-label"
+            = pt.hidden_field :category_id, :value => category.id, name: "parts[][category]"
+          .form-group.col-xs-4
+            = pt.text_field :name, name: "parts[][name]", placeholder: "part name", :class => "parts-form-input"
+          .form-group.col-xs-5
+            = pt.text_field :link, name: "parts[][link]", placeholder: "link to part", :class => "parts-form-input"
+    .actions
+      = f.submit "Show off my setup!", :class => "btn parts-form-btn"
+    = link_to 'Skip this step', next_wizard_path, :class => "link"
